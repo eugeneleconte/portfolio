@@ -16,66 +16,88 @@
        header {
            background: #00273c;
            color: #fff;
-           padding: 1rem 0;
-           margin-left: 8px;
-           margin-right: 8px;
+           padding: 1rem;
            text-align: center;
        }
-       .container {
-           max-width: 1200px;
-           margin: 2rem auto;
-           padding: 0 1rem;
-           display: flex;
-           flex-direction: row;
-           align-items: stretch; /* Étire les sections pour qu'elles aient la même hauteur */
-           gap: 2rem;
-       }
+
+        .container {
+            width: 90%;
+            margin: 1rem auto;
+            padding: 0rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: stretch; /* Les sections prendront toutes la même hauteur */
+        }
 
         .text-section {
-            flex: 1; /* Permet à la section texte de prendre l'espace nécessaire */
-            padding: 1.5rem;
+            flex: 1 1 49%; /* La section de texte occupe 43% de la largeur sur les grands écrans */
+            padding: 0.4rem 1rem 0.4rem 1rem; /* Réduit le padding autour de la section */
             background: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(237, 41, 57, 0.3);
+            box-shadow: 2px 2px 2px rgba(237, 41, 57, 0.15);
+            box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
+            justify-content: center; /* Aligne les éléments en haut */
+            display: flex;
+            flex-direction: column; /* Le texte se place en colonne pour mieux gérer les alignements */
         }
 
         .image-section {
-            flex: 1; /* Permet à la section image de s'adapter à la hauteur de la section texte */
-            display: flex;
-            align-items: center; /* Centre l'image verticalement */
-            justify-content: center; /* Centre l'image horizontalement */
-            background: #f9f9f9; /* Optionnel : arrière-plan pour contraster */
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(237, 41, 57, 0.3);
+           flex: 1 1 35%;
+           padding: 0.4rem 1rem 0.4rem 1rem; /* Réduit le padding autour de la section */
+           display: flex;
+           flex-direction: column;  /* Ajoutez cette ligne pour empiler le titre et l'image */
+           align-items: center;     /* Centre les éléments horizontalement */
+           justify-content: center; /* Aligne les éléments en haut */
+           background: #fff;
+           border-radius: 8px;
+           box-shadow: 2px 2px 2px rgba(237, 41, 57, 0.15);
         }
 
         .image-section img {
-            max-width: 100%; /* Rend l'image responsive */
-            max-height: 100%; /* Empêche l'image de dépasser la section */
-            object-fit: contain; /* Maintient les proportions de l'image */
+           max-width: 16rem;
+           object-fit: contain;
+           padding: 0;
+           padding-bottom: 1rem;
+           margin: 0;
+
         }
 
-        /* Media queries pour ajustements supplémentaires
-        @media (min-width: 768px) {
-            section {
-                width: 80%;
-            }
+        .color-darkblue {
+            color: #00273c;
         }
 
-        @media (min-width: 1024px) {
-            section {
-                width: 60%;
-            }
-       } */
-       h2 {
-           color: #00273c;
-       }
-       a {
-           color: #0000ff;
-           text-decoration: none;
-       }
-       a:hover {
-           text-decoration: underline;
+        h2 {
+            color: #00273c;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        h4 {
+            color: #00273c;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        a {
+            color: #0000ff;
+            text-decoration: none;
+            display: inline-block; /* Pour que le lien n'ait pas d'espace sous lui */
+            margin: 0; /* Espace entre le texte et le lien */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            margin: 0; /* Enlève le margin par défaut du paragraphe */
+        }
+
+       @media (max-width: 768px) {
+           .text-section, .image-section {
+               flex: 1 1 100%;
+           }
        }
    </style>
 </head>
@@ -88,79 +110,84 @@
        <!-- 1.conception et realisation d'un produit -->
        <section class="text-section">
            <h2>Conception et réalisation d'un produit nouveau</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> 4 étudiants en collaboration avec Espace Ombrage<br>
-           <strong style="color: #00273c;">Période :</strong> Septembre 2020 - Juin 2021<br>
-           <strong style="color: #00273c;">Projet :</strong> Conceptualiser et réaliser une bôme d’enroulement adaptable pour une voile d’ombrage.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> CAO, impression 3D, cahier des charges, analyse fonctionnelle et marketing.<br>
+           <p><strong class="color-darkblue">Équipe :</strong> 4 étudiants en collaboration avec Espace Ombrage<br>
+           <strong class="color-darkblue">Période :</strong> Septembre 2020 - Juin 2021<br>
+           <strong class="color-darkblue">Projet :</strong> Conceptualiser et réaliser une bôme d’enroulement adaptable pour une voile d’ombrage.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> CAO, impression 3D, cahier des charges, analyse fonctionnelle et marketing.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
         <!-- 2.image conception -->
-       <section  class="image-section">
-         <h2>CAO de l'extrémité non motorisé de la bôme d'enroulement</h2>
-        <img src="image/embout du bome.png" alt="CAO de l'extrémité non motorisé de la bôme d'enroulement">       
+       <section class="image-section">
+           <img src="image/embout du bome.png" alt="CAO de l'extrémité non motorisé de la bôme d'enroulement">  
+           <h4>CAO de l'extrémité non motorisé de la bôme d'enroulement</h4>   
        </section>
         <!-- 3.Conception, réalisation et commercialisation d’un brumisateur -->
        <section class="text-section">
            <h2>Conception, réalisation et commercialisation d’un brumisateur</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> 8 étudiants<br>
-           <strong style="color: #00273c;">Période :</strong> Octobre 2020 - Décembre 2020<br>
-           <strong style="color: #00273c;">Projet :</strong> Conceptualiser un pulvérisateur à batterie écologique et économique.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> Dimensionnement, calcul des structures, étude de marché.<br>
+           <p><strong class="color-darkblue">Équipe :</strong> 8 étudiants<br>
+           <strong class="color-darkblue">Période :</strong> Octobre 2020 - Décembre 2020<br>
+           <strong class="color-darkblue">Projet :</strong> Conceptualiser un pulvérisateur à batterie écologique et économique.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> Dimensionnement, calcul des structures, étude de marché.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-       <!-- 4.analyse et conception produits -->
+       <!-- 4-->
        <section class="text-section">
            <h2>Analyse et conception produit</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> 8 étudiants<br>
-           <strong style="color: #00273c;">Période :</strong> Septembre 2019 - Juin 2020<br>
-           <strong style="color: #00273c;">Projet :</strong> Adapter un électroménager pour les personnes en situation de handicap.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> Idéation, analyse marketing et technique.<br>
+           <p><strong class="color-darkblue">Équipe :</strong> 8 étudiants<br>
+           <strong class="color-darkblue">Période :</strong> Septembre 2019 - Juin 2020<br>
+           <strong class="color-darkblue">Projet :</strong> Adapter un électroménager pour les personnes en situation de handicap.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> Idéation, analyse marketing et technique.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-       <!-- 5.Développement robotique -->
+        <!-- 5 -->
+       <section class="image-section">
+           <img src="image/le jeu2.png" alt="CAffichage sur la matrice LED lors d'une partie de notre jeu d'arcade">  
+           <h4>Affichage sur la matrice LED lors d'une partie de notre jeu d'arcade</h4>   
+       </section>
+       <!-- 6-->
+        <section class="text-section">
+           <h2>Programmation d'un jeu d'arcade</h2>
+           <p><strong class="color-darkblue">Équipe :</strong> 2 étudiants<br>
+           <strong class="color-darkblue">Période :</strong> Février 2021 - Avril 2021<br>
+           <strong class="color-darkblue">Projet :</strong> Développer un jeu d’arcade avec une carte Arduino, une matrice de LED 32*16 et une commande.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> Gestion de projet électronique et collaboratif, définition du cahier des charges, planification et priorisation.<br>
+           <a href="#">Lien vers notre présentation finale</a></p>
+        </section>
+              <!-- 7 -->
        <section class="text-section">
+           <h2>Challenge Start-Up</h2>
+           <p><strong class="color-darkblue">Équipe :</strong> 7 étudiants<br>
+           <strong class="color-darkblue">Période :</strong> Première semaine de mars 2022<br>
+           <strong class="color-darkblue">Projet :</strong> Conceptualiser un produit innovant répondant à une problématique entreprise.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> Project management, conception de produit digital, développement technique, projection et plannification.<br>
+           <a href="image/photo de profil.png">Lien vers notre présentation finale</a></p>
+       </section>
+              <!-- 8 -->
+        <section class="text-section">
            <h2>Développement robotique</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> 2 étudiants<br>
-           <strong style="color: #00273c;">Période :</strong> Mars 2022 - Mai 2022<br>
-           <strong style="color: #00273c;">Projet :</strong> Développer un robot capable d’exécuter une action précise en suivant un processus prédéfini.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> Project management, programmation embarquée, traitement du signal.<br>
+           <p><strong class="color-darkblue">Équipe :</strong> 2 étudiants<br>
+           <strong class="color-darkblue">Période :</strong> Mars 2022 - Mai 2022<br>
+           <strong class="color-darkblue">Projet :</strong> Développer un robot capable d’exécuter une action précise en suivant un processus prédéfini.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> Project management, programmation embarquée, traitement du signal.<br>
            <a href="#">Lien vers notre rapport finale</a>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-              <!-- 6.Challenge Start-Up -->
+        <!-- 9.Stage technique -->
        <section class="text-section">
-           <h2>Challenge Start-Up</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> 7 étudiants<br>
-           <strong style="color: #00273c;">Période :</strong> Première semaine de mars 2022<br>
-           <strong style="color: #00273c;">Projet :</strong> Conceptualiser un produit innovant répondant à une problèmatique entreprise.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> Project management, conception de produit digital, développement technique, projection et plannification.<br>
-           <a href="image/photo de profil.png">Lien vers notre présentation finale</a></p>
-       </section>
-              <!-- 7.Programmation d'un jeu d'arcade -->
-       <section class="text-section">
-           <h2>Programmation d'un jeu d'arcade</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> 2 étudiants<br>
-           <strong style="color: #00273c;">Période :</strong> Février 2021 - Avril 2021<br>
-           <strong style="color: #00273c;">Projet :</strong> Développer un jeu d’arcade avec une carte Arduino, une matrice de LED 32*16 et une commande.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> Gestion de projet éléctronique et collaboratif, définition du cahier des charges, plannification et priorisation.<br>
+           <h2>Stage technique</h2>
+           <p><strong class="color-darkblue">Équipe :</strong> épaulé par l'ensemble de l'équipe d'INESIS<br>
+           <strong class="color-darkblue">Période :</strong> Juin 2020 - Août 2020<br>
+           <strong class="color-darkblue">Projet :</strong> Développer un club de golf pour débutant, ludique et pédagogique.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> Étude de faisabilité, conception de produit, prototypage, analyse des retours d’expérience, planification des essais.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-        <!-- 8.analyse et conception produits -->
-       <section class="text-section">
-           <h2>Programmation d'un jeu d'arcade</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> épaulé par l'ensemble de l'équipe d'INESIS<br>
-           <strong style="color: #00273c;">Période :</strong> Juin 2020 - Août 2020<br>
-           <strong style="color: #00273c;">Projet :</strong> Développer un club de golf pour débutant, ludique et pédagogique.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> Étude de faisabilité, conception de produit, prototypage, analyse des retours d’expérience, plannification des essais.<br>
-           <a href="#">Lien vers notre présentation finale</a></p>
-       </section>
-        <!-- 9.analyse et conception produits -->
+        <!-- 10.analyse et conception produits -->
        <section class="text-section">
            <h2>Le jeu de la soupe</h2>
-           <p><strong style="color: #00273c;">Équipe :</strong> projet personnel, accompagné par deux étudiantes en design<br>
-           <strong style="color: #00273c;">Période :</strong> Depuis novembre 2020<br>
-           <strong style="color: #00273c;">Projet :</strong>  Conceptualiser et réaliser un jeu de société sur le thème des soupes.<br>
-           <strong style="color: #00273c;">Compétences clés :</strong> Analyse marketing, développement de produits, plannification des essais, tests en conditions.<br>
+           <p><strong class="color-darkblue">Équipe :</strong> projet personnel, accompagné par deux étudiantes en design<br>
+           <strong class="color-darkblue">Période :</strong> Depuis novembre 2020<br>
+           <strong class="color-darkblue">Projet :</strong>  Conceptualiser et réaliser un jeu de société sur le thème des soupes.<br>
+           <strong class="color-darkblue">Compétences clés :</strong> Analyse marketing, développement de produits, planification des essais, tests en conditions.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
    </div>
