@@ -11,14 +11,75 @@
            padding: 0;
            line-height: 1.6;
            background-color: #f9f9f9;
-           color: #333;
+           color: #00273c;
        }
        header {
-           background: #00273c;
-           color: #fff;
-           padding: 1rem;
-           text-align: center;
-       }
+            min-height: 11rem;
+            background: #00273c;
+            color: #fff;
+            padding-top:0.5rem;
+            text-align: center;
+            }
+
+        .header-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Espace entre les divisions */
+            align-items: center; /* Centre verticalement */
+            max-width: 90%;
+            margin: 0 auto; /* Centrer le contenu horizontalement */
+        }
+
+        .header-left,
+        .header-right {
+            flex: 1.5; /* Chaque division prend un tiers de l'espace */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centre horizontalement le contenu dans chaque division */
+            text-align: center; /* Centrer le contenu horizontalement */
+        }
+
+        .header-center {
+            flex: 3; /* Chaque division prend un tiers de l'espace */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centre horizontalement le contenu dans chaque division */
+            text-align: center; /* Centrer le contenu horizontalement */
+        }
+
+        .header-logo {
+            max-width: 9rem; /* Taille de l'image */
+            height: auto;
+            margin-bottom: 0rem;
+        }
+
+        .header-center h1 {
+            margin: 0rem 0;
+        }
+
+        .header-center p {
+            margin: 0;
+        }
+
+        .header-right ul {
+            list-style-type: none; /* Supprime les puces par défaut */
+            padding: 0;
+            margin: 0;
+            text-align: left; /* Aligne le texte des bullets points */
+        }
+
+        .header-right ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .header-right ul li a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .header-right ul li a:hover {
+            text-decoration: underline;
+        }   
 
         .container {
             width: 90%;
@@ -98,13 +159,41 @@
            .text-section, .image-section {
                flex: 1 1 100%;
            }
+           .header-left, .header-right {
+                flex: 1; /* Réduire l'espace attribué pour conserver la répartition */
+            }
+            .header-container {
+            flex-wrap: wrap; /* Forcer les divisions à passer à la ligne si nécessaire */
+            }
+
+            .header-left, .header-center, .header-right {
+                flex: 100%; /* Chaque section prend toute la largeur */
+                margin-bottom: 1rem; /* Espacement entre les sections */
+            }
        }
    </style>
 </head>
 <body>
-   <header>
-       <h1>Portfolio</h1>
-       <p>Projets d'innovation, analyse de produit, reconception responsable...</p>
+<header>
+    <div class="header-container">
+        <div class="header-left">
+            <img src="image/photo_de_profil-removebg-preview.png" alt="Logo ou image" class="header-logo">
+        </div>
+        <div class="header-center">
+            <h1>Mon Portfolio</h1>
+            <p>Projets d'innovation, analyse de produit, reconception responsable...</p>
+        </div>
+        <div class="header-right">
+            <ul>
+                <li><strong>Eugène Leconte</strong></li>
+                <li><strong>Email :</strong> <a href="mailto:eugeneleconte@outlook.com"> eugeneleconte@outlook.com</a></li>
+                <li><strong>Téléphone :</strong> <a href="tel:+33619765415"> +33619765415</a></li>
+                <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/eug%C3%A8ne-leconte/">Mon Profil</a></li>
+                <li> </a href="#">Visionner mon CV ici</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
    </header>
    <div class="container">
        <!-- 1.conception et realisation d'un produit -->
