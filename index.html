@@ -25,26 +25,33 @@
            max-width: 1200px;
            margin: 2rem auto;
            padding: 0 1rem;
-           display: grid;
-           grid-template-columns: repeat(2, 1fr);
+           display: flex;
+           align-items: stretch; /* Étire les sections pour qu'elles aient la même hauteur */
            gap: 2rem;
        }
-       section {
-           background: #fff;
-           padding: 1.5rem;
-           border-radius: 8px;
-           box-shadow: 0 2px 4px rgba(237, 41, 57, 0.3);
-           /*width: 90%;*/
+
+        .text-section {
+            flex: 1; /* Permet à la section texte de prendre l'espace nécessaire */
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(237, 41, 57, 0.3);
         }
 
-        /* Styles pour les images */
-        section img {
-            max-width: 100%; /* L'image ne dépasse jamais la largeur de son conteneur */
-            max-height: 400px;
-            height: auto; /* Conserve les proportions de l'image */
-            display: block; /* Évite les marges blanches sous l'image */
-            margin: 0 auto; /* Centre l'image horizontalement */
-            border-radius: 8px; /* Ajoute des coins arrondis (optionnel) */
+        .image-section {
+            flex: 1; /* Permet à la section image de s'adapter à la hauteur de la section texte */
+            display: flex;
+            align-items: center; /* Centre l'image verticalement */
+            justify-content: center; /* Centre l'image horizontalement */
+            background: #f9f9f9; /* Optionnel : arrière-plan pour contraster */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(237, 41, 57, 0.3);
+        }
+
+        .image-section img {
+            max-width: 100%; /* Rend l'image responsive */
+            max-height: 100%; /* Empêche l'image de dépasser la section */
+            object-fit: contain; /* Maintient les proportions de l'image */
         }
 
         /* Media queries pour ajustements supplémentaires
@@ -78,7 +85,7 @@
    </header>
    <div class="container">
        <!-- 1.conception et realisation d'un produit -->
-       <section>
+       <section class="text-section">
            <h2>Conception et réalisation d'un produit nouveau</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 4 étudiants en collaboration avec Espace Ombrage<br>
            <strong style="color: #00273c;">Période :</strong> Septembre 2020 - Juin 2021<br>
@@ -87,12 +94,12 @@
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
         <!-- 2.image conception -->
-       <section>
+       <section  class="image-section">
          <h2>CAO de l'extrémité non motorisé de la bôme d'enroulement</h2>
         <img src="image/embout du bome.png" alt="CAO de l'extrémité non motorisé de la bôme d'enroulement">       
        </section>
         <!-- 3.Conception, réalisation et commercialisation d’un brumisateur -->
-       <section>
+       <section class="text-section">
            <h2>Conception, réalisation et commercialisation d’un brumisateur</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 8 étudiants<br>
            <strong style="color: #00273c;">Période :</strong> Octobre 2020 - Décembre 2020<br>
@@ -101,7 +108,7 @@
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
        <!-- 4.analyse et conception produits -->
-       <section>
+       <section class="text-section">
            <h2>Analyse et conception produit</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 8 étudiants<br>
            <strong style="color: #00273c;">Période :</strong> Septembre 2019 - Juin 2020<br>
@@ -110,7 +117,7 @@
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
        <!-- 5.Développement robotique -->
-       <section>
+       <section class="text-section">
            <h2>Développement robotique</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 2 étudiants<br>
            <strong style="color: #00273c;">Période :</strong> Mars 2022 - Mai 2022<br>
@@ -120,7 +127,7 @@
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
               <!-- 6.Challenge Start-Up -->
-       <section>
+       <section class="text-section">
            <h2>Challenge Start-Up</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 7 étudiants<br>
            <strong style="color: #00273c;">Période :</strong> Première semaine de mars 2022<br>
@@ -129,7 +136,7 @@
            <a href="image/photo de profil.png">Lien vers notre présentation finale</a></p>
        </section>
               <!-- 7.Programmation d'un jeu d'arcade -->
-       <section>
+       <section class="text-section">
            <h2>Programmation d'un jeu d'arcade</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 2 étudiants<br>
            <strong style="color: #00273c;">Période :</strong> Février 2021 - Avril 2021<br>
@@ -138,7 +145,7 @@
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
         <!-- 8.analyse et conception produits -->
-       <section>
+       <section class="text-section">
            <h2>Programmation d'un jeu d'arcade</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> épaulé par l'ensemble de l'équipe d'INESIS<br>
            <strong style="color: #00273c;">Période :</strong> Juin 2020 - Août 2020<br>
@@ -147,7 +154,7 @@
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
         <!-- 9.analyse et conception produits -->
-       <section>
+       <section class="text-section">
            <h2>Le jeu de la soupe</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> projet personnel, accompagné par deux étudiantes en design<br>
            <strong style="color: #00273c;">Période :</strong> Depuis novembre 2020<br>
