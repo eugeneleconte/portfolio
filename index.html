@@ -32,6 +32,29 @@
            padding: 1.5rem;
            border-radius: 8px;
            box-shadow: 0 2px 4px rgba(237, 41, 57, 0.3);
+           width: 90%;
+        }
+
+        /* Styles pour les images */
+        section img {
+            max-width: 100%; /* L'image ne dépasse jamais la largeur de son conteneur */
+            height: auto; /* Conserve les proportions de l'image */
+            display: block; /* Évite les marges blanches sous l'image */
+            margin: 0 auto; /* Centre l'image horizontalement */
+            border-radius: 8px; /* Ajoute des coins arrondis (optionnel) */
+        }
+
+        /* Media queries pour ajustements supplémentaires */
+        @media (min-width: 768px) {
+            section {
+                width: 80%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            section {
+                width: 60%;
+            }
        }
        h2 {
            color: #00273c;
@@ -51,7 +74,7 @@
        <p>Projets d'innovation, analyse de produit, reconception responsable...</p>
    </header>
    <div class="container">
-       <!-- conception et realisation d'un produit -->
+       <!-- 1.conception et realisation d'un produit -->
        <section>
            <h2>Conception et réalisation d'un produit nouveau</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 4 étudiants en collaboration avec Espace Ombrage<br>
@@ -60,7 +83,12 @@
            <strong style="color: #00273c;">Compétences clés :</strong> CAO, impression 3D, cahier des charges, analyse fonctionnelle et marketing.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-        <!-- Conception, réalisation et commercialisation d’un brumisateur -->
+        <!-- 2.image conception -->
+       <section>
+         <h2>Photo de profil</h2>
+        <img src="image/photo de profil.png" alt="Photo de profil">       
+       </section>
+        <!-- 3.Conception, réalisation et commercialisation d’un brumisateur -->
        <section>
            <h2>Conception, réalisation et commercialisation d’un brumisateur</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 8 étudiants<br>
@@ -69,7 +97,7 @@
            <strong style="color: #00273c;">Compétences clés :</strong> Dimensionnement, calcul des structures, étude de marché.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-       <!-- analyse et conception produits -->
+       <!-- 4.analyse et conception produits -->
        <section>
            <h2>Analyse et conception produit</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 8 étudiants<br>
@@ -78,7 +106,7 @@
            <strong style="color: #00273c;">Compétences clés :</strong> Idéation, analyse marketing et technique.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-       <!-- Développement robotique -->
+       <!-- 5.Développement robotique -->
        <section>
            <h2>Développement robotique</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 2 étudiants<br>
@@ -88,7 +116,7 @@
            <a href="#">Lien vers notre rapport finale</a>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-              <!-- Challenge Start-Up -->
+              <!-- 6.Challenge Start-Up -->
        <section>
            <h2>Challenge Start-Up</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 7 étudiants<br>
@@ -97,7 +125,7 @@
            <strong style="color: #00273c;">Compétences clés :</strong> Project management, conception de produit digital, développement technique, projection et plannification.<br>
            <a href="image/photo de profil.png">Lien vers notre présentation finale</a></p>
        </section>
-              <!-- Programmation d'un jeu d'arcade -->
+              <!-- 7.Programmation d'un jeu d'arcade -->
        <section>
            <h2>Programmation d'un jeu d'arcade</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> 2 étudiants<br>
@@ -106,7 +134,7 @@
            <strong style="color: #00273c;">Compétences clés :</strong> Gestion de projet éléctronique et collaboratif, définition du cahier des charges, plannification et priorisation.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-        <!-- analyse et conception produits -->
+        <!-- 8.analyse et conception produits -->
        <section>
            <h2>Programmation d'un jeu d'arcade</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> épaulé par l'ensemble de l'équipe d'INESIS<br>
@@ -115,7 +143,7 @@
            <strong style="color: #00273c;">Compétences clés :</strong> Étude de faisabilité, conception de produit, prototypage, analyse des retours d’expérience, plannification des essais.<br>
            <a href="#">Lien vers notre présentation finale</a></p>
        </section>
-        <!-- analyse et conception produits -->
+        <!-- 9.analyse et conception produits -->
        <section>
            <h2>Le jeu de la soupe</h2>
            <p><strong style="color: #00273c;">Équipe :</strong> projet personnel, accompagné par deux étudiantes en design<br>
