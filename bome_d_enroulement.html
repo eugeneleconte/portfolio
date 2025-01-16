@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/svg+xml" href="image/photo_de_profil-removebg-preview.png">
+   <title>La bôme d'enroulement</title>
+   <link rel="stylesheet" href="style.css"> <!-- Chemin vers votre fichier CSS -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="header-left">
+                    <div class="header-left-left">
+                        <img src="image/photo_de_profil-removebg-preview.png" alt="Logo ou image" class="header-logo">
+                    </div>
+                    <div class="header-left-right">
+                        <p><i></i></p>
+                    </div>
+                </div>
+                <div class="header-center">
+                    <h1>La bôme d'enroulement</h1>
+                    <p>Projets d'innovation, analyse de produit, reconception responsable...</p>
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <li><strong>Email :</strong> <a href="mailto:eugeneleconte@outlook.com"> eugeneleconte@outlook.com</a></li>
+                        <li><strong>Téléphone :</strong> <a href="tel:+33619765415"> +33619765415</a></li>
+                        <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/eug%C3%A8ne-leconte/">Mon Profil</a></li>
+                    </ul>
+                </div>
+            </div>    
+            <div class="header-bottom">
+                <nav>
+                  <ul>
+                    <li class="menu-deroulant">
+                      <a href="#">Sportif & Engagé</a>
+                      <ul class="sous-menu">
+                        <li><a href="#">Mon parcours d'athlètes</a></li>
+                        <li><a href="#">Scoutisme, engagement sociaux</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-deroulant">
+                      <a href="#">Réalisations</a>
+                      <ul class="sous-menu">
+                        <li><a href="#">Ecole, entreprises</a></li>
+                        <li><a href="#">Pendant mon temps libre</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">À propos</a></li>
+                  </ul>
+                </nav>
+            </div>    
+        </div>
+    </header>
+   <div class="container">
+       <!-- 1.conception et realisation d'un produit -->
+       <section class="text-section">
+            <h1>GeeksforGeeks</h1>
+            <h3>Embedding the PDF file Using Object Tag</h3>
+            <object
+                id="pdfObject" 
+                class="pdf" 
+                data="presentation/bome_d_enroulement_watermark.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                width="800"
+                height="500">
+            </object>
+            <script>
+                document.getElementById('pdfObject').addEventListener('contextmenu', function(event) {event.preventDefault();});
+            </script>
+        </section>
+   </div>
+</body>
+</html>
