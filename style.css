@@ -56,14 +56,18 @@ header {
     align-items: center;
     justify-content: flex-start; /* Place les éléments complètement à gauche */
     text-align: left; /* Texte aligné à gauche */
-    gap: 1rem;
-    padding-left: 0; /* Supprime tout espace ajouté à gauche */
+    gap: 0.5rem;
     margin-left: 0; /* Supprime la marge gauche */
 }
 
 .header-left-left {
     flex-shrink: 0;
-    margin-right: 0.5rem; /* Espace réduit entre le logo et le texte */
+    padding-left: 0.5rem;
+}
+.header-left-right {
+    text-align: left;
+    font-size: 0.8rem;
+
 }
 
 .header-logo {
@@ -83,10 +87,14 @@ header {
 
 .header-center h1 {
     margin: 0rem 0;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .header-center p {
     margin: 0;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
 }
 
 .header-right{
@@ -101,7 +109,8 @@ header {
 }
 .header-right ul {
     list-style-type: none; /* Supprime les puces par défaut */
-    padding: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     margin: 0;
     text-align: left; /* Aligne le texte des bullets points */
 }
