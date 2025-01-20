@@ -1,10 +1,11 @@
 body {
        font-family: Lato, sans-serif;
        margin: 0; /* Supprime les marges par défaut */
-       padding-top: 13rem; /* Ajoute un espace pour compenser la hauteur du header */
+       padding-top: 13.5rem; /* Ajoute un espace pour compenser la hauteur du header */
        line-height: 1.6;
        background-color: #f9f9f9;
        color: #00273c;
+       justify-content: center;
        }
 header {
     position: fixed; /* Rendre le header fixe */
@@ -23,51 +24,85 @@ header {
 
 .header-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si besoin */
+    justify-content: center; /* alignement horizontal */
     flex-direction: column; /* Aligne les éléments verticalement */
-    align-items: center;
-    width: 100%; /* Supprime la restriction de largeur */
+    text-align: center;
+    align-items: center; /* alignement vertical */
+    width: 100%; /* Assurez une largeur complète */
     padding: 0; /* Ajoute un petit padding pour éviter que le contenu touche les bords */
-    margin: 0; /* Supprime l'espacement horizontal automatique */
 }
 
 .header-top{
     flex: 7;
+    width: 100%; /* Supprime la restriction de largeur */
     display: flex;
     flex-direction: row; /* Aligne les éléments horizontalement */
     align-items: center;
+    padding-left: 1rem;
 }
+.header-top hr{
+    border: 0.1px solid rgba(249, 249, 249, 1);
+    font-weight: normal;
+    width: 90%;
+}
+
+.header-top h4{
+    color: #f9f9f9;
+    font-weight: normal;
+}
+
 .header-bottom {
     flex: 1;
     display: flex;
-    width: 100%; /* Assurez une largeur complète */
+    width: 90%; /* 95% max de la largeur */
     flex-direction: column;
     align-items: center;
-    margin: 0; /* Supprime les marges */
-    padding: 0; /* Supprime les espaces internes */
     box-sizing: border-box; /* Inclut padding et bordures dans la largeur totale */
 }
 
 .header-left {
-    flex: 2;
+    flex: 0 0 28%;
+    width: 100%; /* Supprime la restriction de largeur */
+    margin-left: 0rem;
     display: flex;
     flex-direction: row; /* Aligne les éléments horizontalement */
-    align-items: center;
     justify-content: flex-start; /* Place les éléments complètement à gauche */
+    align-items: center;
+    gap: 1rem;
     text-align: left; /* Texte aligné à gauche */
-    gap: 0.5rem;
-    margin-left: 0; /* Supprime la marge gauche */
 }
 
 .header-left-left {
-    flex-shrink: 0;
-    padding-left: 0.5rem;
+    flex: 0;
+    display: flex; 
+    flex-shrink: 0; /*  L'élément ne rétrécira pas */
 }
 .header-left-right {
+    flex: 1;
+    display: flex; /* Assurez-vous que le texte reste dans une zone flexible */
+    justify-content: flex-start; /* Place les éléments complètement à gauche */
+    align-items: center;
     text-align: left;
     font-size: 0.8rem;
+}
 
+.header-left-right ul {
+    list-style-type: none; /* Remove bullet points for the main list */
+    padding-left: 0; /* Ensure no indentation */
+}
+
+.header-left-right ul li {
+    list-style-type: none; /* Remove bullet points for the main list items */
+}
+
+.header-left-right ul ul {
+    list-style-type: disc; /* Use solid bullet points (black circles) for nested list */
+    padding-left: 20px; /* Indentation for nested list */
+}
+
+.header-left-right ul ul li {
+    list-style-type: disc; /* Ensure the nested list items have bullet points */
 }
 
 .header-logo {
@@ -78,7 +113,7 @@ header {
 }
 
 .header-center {
-    flex: 3; /* Chaque division prend un tiers de l'espace */
+    flex: 1; /* Chaque division prend un tiers de l'espace */
     display: flex;
     flex-direction: column;
     align-items: center; /* Centre horizontalement le contenu dans chaque division */
@@ -99,12 +134,13 @@ header {
 }
 
 .header-right{
-    flex: 2; /* Chaque division prend un tiers de l'espace */
+    flex: 0 0 28%; /* Chaque division prend un tiers de l'espace */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre horizontalement le contenu dans chaque division */
-    justify-content: flex-start; /* Aligne les éléments à gauche */
-    text-align: center; /* Centrer le contenu horizontalement */
+    align-items: center;
+    justify-content: flex-end; /* Aligne les éléments à gauche */
+    text-align: left; /* Centrer le contenu horizontalement */
+    padding-right: 1rem;
     gap: 1rem; /* Espace entre les éléments */
 
 }
@@ -146,7 +182,7 @@ header {
     background: #fff;
     border-radius: 8px;
     max-width: 70%;
-    box-shadow: 0 4px 3px -3px rgba(0, 0, 255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(0, 0, 255, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
     justify-content: center; /* Aligne les éléments en haut */
     display: flex;
@@ -154,22 +190,23 @@ header {
 }
 
 .image-section {
-   flex: 1 1 35%;
-   padding: 0.4rem 0.4rem 0.4rem 0.4rem; /* Réduit le padding autour de la section */
-   display: flex;
-   flex-direction: column;  /* Ajoutez cette ligne pour empiler le titre et l'image */
-   align-items: center;     /* Centre les éléments horizontalement */
-   justify-content: center; /* Aligne les éléments en haut */
-   background: #f9f9f9;
-   border-radius: 8px;
-   box-shadow: 0 4px 3px -3px rgba(0, 0, 255, 0.15);
+    flex: 1 1 35%;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem; /* Réduit le padding autour de la section */
+    display: flex;
+    text-align: center;
+    flex-direction: column;  /* Ajoutez cette ligne pour empiler le titre et l'image */
+    align-items: center;     /* Centre les éléments horizontalement */
+    justify-content: center; /* Aligne les éléments en haut */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: -4px 4px 3px -3px rgba(0, 0, 255, 0.15);
 }
 
 .image-section img {
    max-width: 16rem;
    object-fit: contain;
    padding: 0;
-   padding-bottom: 1rem;
+   padding-bottom: 0.5rem;
    margin: 0;
 
 }
@@ -240,6 +277,13 @@ h4 {
     margin-top: 0;
 }
 
+h3{
+    text-align: center;
+    font-weight: normal;
+    margin-top: 1rem ;
+    margin-bottom:0rem;
+}
+
 a {
     color: #00273c;
     text-decoration: none;
@@ -253,6 +297,12 @@ a:hover {
 
 p {
     margin: 0; /* Enlève le margin par défaut du paragraphe */
+}
+
+hr{
+    border: 0.5px solid rgba(0, 0, 255, 0.55);
+    width: 90%;
+    margin-top: 0;
 }
 
 /* Définir la hauteur du menu principal */
@@ -273,12 +323,29 @@ p {
   padding-top: 1rem;
   transition: left 0.5s ease;
 }
+.sidenav ul li a{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.sidenav  ul li{
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1rem;
+}
+
+.sidenav  ul li ul{
+ list-style-type: disc;
+}
+
+.sidenav  ul li ul li::marker{
+  color: #00273c;
+}
 
 /* Sidenav menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.sidenav a {  
   text-decoration: none;
   font-size: 1rem;
+  background-color: #f9f9f9;
   color: #00273c;
   display: block;
   transition: 0.3s;
@@ -286,23 +353,33 @@ p {
 .sidenav p{
   font-size: 1rem;
   color: #00273c;
-  padding-left: 1rem;
+  background-color: #f9f9f9;
+  z-index: 100;
 }
 
 .sidenav a:hover {
   color: #0000ff;
+  background-color: #f9f9f9;
 }
 
 .sidenav ul {
   list-style-type: none;
   padding: 0;
-  padding-left: 1rem;
-  margin: 0;
+  background-color: #f9f9f9;
+  margin: 1rem;
 }
 
 /* Active class */
 .sidenav.active {
   left: 0;
+  background-color: #f9f9f9;
+}
+
+
+/* Active class */
+.sidenav.active .burger-icon{
+  display: none;
+
 }
 
 /* Close btn */
@@ -310,16 +387,18 @@ p {
   position: fixed;
   top: 0;
   color: #00273c;
+  background: none;
   margin-left: 14rem;
   font-size: 2rem;
 }
 
 .sidenav .close:hover {
     color: #0000ff;
+    background: none;
 }
 
 .burger-icon{
-    display: none;
+    display: none; 
     position: fixed;
 }
 /* Icône burger */
@@ -361,6 +440,17 @@ p {
     text-decoration: underline;
     text-align: center;
 }
+.section-portfolio p  {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    left: 0;
+}
+
+.section-portfolio ul  {
+    margin-top: 0;
+    padding-top: 0;
+    left: 0;
+}
 
 
 .section-portfolio-flex {
@@ -368,7 +458,7 @@ p {
     display: flex;
     flex-direction: row; /* Affichage côte à côte */
     gap: 1rem;
-    align-items: stretch; /* Assure que les éléments enfants aient la même hauteur */
+    align-items:  ; /* Assure que les éléments enfants aient la même hauteur */
 }
 
 .section-portfolio-texte {
@@ -405,9 +495,9 @@ p {
 
 .slideshow-container img {
     max-width: 100%; /* Redimensionne les images pour tenir dans le conteneur */
-    max-height: 21rem; /* Limite la hauteur des images */
+    max-height: 17rem; /* Limite la hauteur des images */
     object-fit: contain; /* Assure un redimensionnement proportionnel sans recadrage */
-    border-radius: 8px;    
+    border-radius: 4px;    
     box-shadow: 0 4px 3px -3px rgba(0, 0, 255, 0.15);
 }
 
@@ -416,6 +506,7 @@ p {
   flex: 1;
   min-height: 90%;
   display: none;
+  align-items: center;
 }
 
 /* Caption text */
@@ -475,8 +566,15 @@ p {
   font-size: 1rem;
   position: sticky;  /* Rendre le menu sticky */
   top: 0;
-  background-color: #f9f9f9;  /* Fond de menu */
-  z-index: 100;  /* Assurer que le menu reste au-dessus des autres éléments */
+  border-top: 0.5px solid #f9f9f9;
+  background-color: rgba(0, 39, 60, 0.00);  /* Fond de menu */
+  z-index: 1;  /* Assurer que le menu reste au-dessus des autres éléments */
+}
+
+.header-bottom nav:hover {
+    border-top: 1px solid #0000ff;
+    background-color: #f9f9f9;
+    color: #00273c;
 }
 
 /* Liste principale des éléments de menu */
@@ -503,13 +601,18 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);  /* Centrer les liens horizontalement et verticalement */
   text-decoration: none;
-  color: #00273c;
+  color: #f9f9f9;
 }
+
+.header-bottom nav:hover > ul > li > a{
+    color: #00273c;
+}
+
 
 /* L'animation de la flèche dans le menu déroulant */
 .menu-deroulant > a:after {
   content: '❯';
-  color: #0000ff;
+  color: #f9f9f9;
   font-size: 1rem;
   margin-left: 0.5rem;
   display: inline-block;
@@ -556,7 +659,7 @@ p {
 /* Montre le sous-menu lors du survol du menu principal */
 .menu-deroulant:hover > .sous-menu {
   display: block;  /* Affiche le sous-menu */
-  max-height: 50em;  /* Permet l'extension complète du sous-menu */
+  max-height: 5rem;  /* Permet l'extension complète du sous-menu */
   opacity: 1;  /* Rend le sous-menu visible */
 }
 
@@ -576,7 +679,7 @@ p {
 
 .pdf {
         width: 100%;
-        aspect-ratio: 4/3;
+        aspect-ratio: 16/3;
     }
 
 
@@ -674,6 +777,14 @@ p {
     }
     .sidenav{
         display: block;
+    }
+
+    .section-portfolio-img{
+        display: none;
+    }
+    .section-portfolio-texte {
+        flex: 1 1 100%; /* La zone de texte occupe 60% de l'espace disponible */
+        max-width: 100%;
     }
 
 }
