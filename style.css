@@ -1,10 +1,10 @@
 body {
-       font-family: Lato, sans-serif;
+       font-family: Muli, sans-serif;
        margin: 0; /* Supprime les marges par défaut */
        padding-top: 13.5rem; /* Ajoute un espace pour compenser la hauteur du header */
        line-height: 1.6;
        background-color: #f9f9f9;
-       color: #00273c;
+       color: rgba(49,42,37, 1);
        justify-content: center;
        }
 header {
@@ -12,12 +12,13 @@ header {
     top: 0; /* Positionné tout en haut de la page */
     left: 0; /* Étendre à partir de la gauche */
     width: 100%; /* Occupe toute la largeur de l'écran */
+    font-family: Muli, sans-serif;
     min-height: 10rem;
-    background: rgba(0, 39, 60, 0.97);
+    background: rgba(49,42,37, 1);
     color: #fff;
     padding-top: 0.5rem; /* Espacement vertical uniquement */
     text-align: center;
-    box-shadow: 2px 2px 2px rgba(0, 0, 255, 0.15);
+    box-shadow: 2px 2px 2px rgba(202,161,134, 0.15);
     z-index: 1000; /* Assure que le header reste au-dessus d'autres éléments */
 }
 
@@ -81,7 +82,7 @@ header {
 .header-left-right {
     flex: 1;
     display: flex; /* Assurez-vous que le texte reste dans une zone flexible */
-    justify-content: flex-start; /* Place les éléments complètement à gauche */
+    justify-content: center; /* Place les éléments complètement à gauche */
     align-items: center;
     text-align: left;
     font-size: 0.8rem;
@@ -123,13 +124,14 @@ header {
 
 .header-center h1 {
     margin: 0rem 0;
+    font-family: PT, serif;
     font-size: 1.5rem;
     padding-bottom: 0.5rem;
 }
 
-.header-center p {
+.header-center h4 {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding-bottom: 0.5rem;
 }
 
@@ -182,7 +184,7 @@ header {
     background: #fff;
     border-radius: 8px;
     max-width: 70%;
-    box-shadow: -4px 4px 3px -3px rgba(0, 0, 255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(202,161,134, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
     justify-content: center; /* Aligne les éléments en haut */
     display: flex;
@@ -199,7 +201,7 @@ header {
     justify-content: center; /* Aligne les éléments en haut */
     background: #fff;
     border-radius: 8px;
-    box-shadow: -4px 4px 3px -3px rgba(0, 0, 255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(202,161,134, 0.15);
 }
 
 .image-section img {
@@ -242,7 +244,7 @@ header {
     margin: -1.4rem -1.4rem;
     padding: 1.4rem 1.4rem; /* Réduit le padding autour de la section */
     background-color: rgba(249, 249, 249, 0.0);
-    color: #00273c;
+    color: rgba(49,42,37, 1);
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
@@ -259,20 +261,21 @@ header {
 }
 
 .color-darkblue {
-    color: #00273c;
+    color: rgba(49,42,37, 1);
 }
 
 .color-flashblue {
-    color: #0000ff;
+    color: rgba(202,161,134, 1);
 }
 h2 {
-    color: #00273c;
+    font-family:PT, serif;
+    color: rgba(145,118,101, 1);
     margin-bottom: 0;
     margin-top: 0;
 }
 
 h4 {
-    color: #00273c;
+    color: rgba(49,42,37, 1);
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -285,7 +288,7 @@ h3{
 }
 
 a {
-    color: #00273c;
+    color: rgba(49,42,37, 1);
     text-decoration: none;
     display: inline-block; /* Pour que le lien n'ait pas d'espace sous lui */
     margin: 0; /* Espace entre le texte et le lien */
@@ -300,7 +303,7 @@ p {
 }
 
 hr{
-    border: 0.5px solid rgba(0, 0, 255, 0.55);
+    border: 0.5px solid rgba(202,161,134, 0.55);
     width: 90%;
     margin-top: 0;
 }
@@ -338,7 +341,7 @@ hr{
 }
 
 .sidenav  ul li ul li::marker{
-  color: #00273c;
+  color: rgba(49,42,37, 1);
 }
 
 /* Sidenav menu links */
@@ -346,19 +349,19 @@ hr{
   text-decoration: none;
   font-size: 1rem;
   background-color: #f9f9f9;
-  color: #00273c;
+  color: rgba(49,42,37, 1);
   display: block;
   transition: 0.3s;
 }
 .sidenav p{
   font-size: 1rem;
-  color: #00273c;
+  color: rgba(49,42,37, 1);
   background-color: #f9f9f9;
   z-index: 100;
 }
 
 .sidenav a:hover {
-  color: #0000ff;
+  color: rgba(202,161,134, 1);
   background-color: #f9f9f9;
 }
 
@@ -386,14 +389,14 @@ hr{
 .sidenav .close {
   position: fixed;
   top: 0;
-  color: #00273c;
+  color: rgba(49,42,37, 1);
   background: none;
   margin-left: 14rem;
   font-size: 2rem;
 }
 
 .sidenav .close:hover {
-    color: #0000ff;
+    color: rgba(202,161,134, 1);
     background: none;
 }
 
@@ -417,16 +420,15 @@ hr{
     border-radius: 8px;
     max-width: 90%;
     flex-direction: column ;
-    box-shadow: -4px 4px 3px -3px rgba(0, 0, 255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(202,161,134, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
     justify-content: center; /* Aligne les éléments en haut */
     display: flex;
 }
 
-
 .section-portfolio h2 {
     flex: 1;
-    color: #00273c;
+    color: rgba(145,118,101, 1);
     text-align: center;
 }
 .section-portfolio p {
@@ -436,7 +438,8 @@ hr{
 }
 .section-portfolio a {
     flex: 1;
-    color: #0000ff;
+    font-family: PT, serif;
+    color: rgba(202,161,134, 1);
     text-decoration: underline;
     text-align: center;
 }
@@ -498,7 +501,7 @@ hr{
     max-height: 17rem; /* Limite la hauteur des images */
     object-fit: contain; /* Assure un redimensionnement proportionnel sans recadrage */
     border-radius: 4px;    
-    box-shadow: 0 4px 3px -3px rgba(0, 0, 255, 0.15);
+    box-shadow: 0 4px 3px -3px rgba(0,255, 0, 0.15);
 }
 
 /* Hide the images by default */
@@ -512,7 +515,7 @@ hr{
 /* Caption text */
 .text {
   flex: 1;
-  color: #00273c;
+  color: rgba(49,42,37, 1);
   font-size: 0.8rem;
   position: relative;
   width: 100%;
@@ -538,7 +541,7 @@ hr{
 }
 
 .active, .dot:hover {
-  background-color: #00273c;
+  background-color: rgba(49,42,37, 1);
 }
 
 /* Fading animation */
@@ -557,7 +560,7 @@ hr{
   flex: 1;
   margin: 0;
   padding: 0;
-  font-family: Lato, sans-serif;
+  font-family: Muli, sans-serif;
 }
 
 /* Conteneur de navigation sticky */
@@ -567,14 +570,14 @@ hr{
   position: sticky;  /* Rendre le menu sticky */
   top: 0;
   border-top: 0.5px solid #f9f9f9;
-  background-color: rgba(0, 39, 60, 0.00);  /* Fond de menu */
+  background-color: rgba(49,42,37, 0.00);  /* Fond de menu */
   z-index: 1;  /* Assurer que le menu reste au-dessus des autres éléments */
 }
 
 .header-bottom nav:hover {
-    border-top: 1px solid #0000ff;
+    border-top: 1px solid rgba(145,118,101, 1);
     background-color: #f9f9f9;
-    color: #00273c;
+    color: rgba(49,42,37, 1);
 }
 
 /* Liste principale des éléments de menu */
@@ -605,7 +608,7 @@ hr{
 }
 
 .header-bottom nav:hover > ul > li > a{
-    color: #00273c;
+    color: rgba(49,42,37, 1);
 }
 
 
@@ -644,12 +647,12 @@ hr{
 
 /* Lorsque l'élément du menu est survolé, changer la couleur */
 .header-bottom nav > ul > li:hover > a {
-  color: #0000ff;
+  color: rgba(145,118,101, 1);
 }
 
 /* Lorsque l'élément du sous-menu est survolé */
 .sous-menu > li:hover {
-  background-color: rgba(0, 0, 255, 0.7);
+  background-color: rgba(145,118,101, 1);
 }
 
 .sous-menu > li:hover > a {
@@ -679,7 +682,7 @@ hr{
 
 .pdf {
         width: 100%;
-        aspect-ratio: 16/3;
+        aspect-ratio: 5/3;
     }
 
 
@@ -699,14 +702,14 @@ hr{
 @keyframes apparitionSousMenu {
   0% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
-    border-top: 3px solid #0000ff;
+    border-top: 3px solid rgba(145,118,101, 1);
   }
   30% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
   100% {
     max-height: 50em;
-    border-top: 3px solid #2169EC;
+    border-top: 3px solid rgba(145,118,101, 1);
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
 }
