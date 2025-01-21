@@ -29,7 +29,7 @@
                     </div>    
                 </div>    
                 <div class="header-center">
-                    <h1>Programmation d'un jeu d'arcade</h1>
+                    <h1>Programmation d'un jeu d'arcade</h1><hr>
                     <p>2 étudiants supervisés par notre ensignant d'intelligence ambiante ⸱ Février 2021 - Avril 2021<br></p>
                 </div>
                 <div class="header-right">
@@ -107,12 +107,11 @@
    <div class="container">
        <!-- 1.conception et realisation d'un produit -->
        <section class="section-portfolio">
-            <h2><u>Contexte et présentation du projet</u></h2>
+            <h2>Contexte et présentation du projet</h2>
             <div class="section-portfolio-flex">
                 <div class="section-portfolio-texte">
-                    <p>Chaque année de mon cursus à l'ITEEM Centrale Lille, il nous a été proposé de travailler en équipe sur des projets techniques. Une demi-journée par semaine était consacrée à ces projets, sans compter toutes les heures passées à y travailler après les cours, le week-end ou encore durant la pause de midi. En deuxième année, en équipe de quatre étudiants, nous avons, pour la première fois, collaboré avec une entreprise. Parmi les projets proposés, nous avons choisi de travailler avec Espace Ombrage, spécialiste des voiles d'ombrage depuis 2004, qui place la satisfaction client au centre de son activité. Espace Ombrage souhaite ainsi proposer des produits <cite>accessibles tout en privilégiant la qualité</cite>.<br><br>
-                    L'une des problématiques auxquelles fait face Espace Ombrage réside dans le transport et la logistique de livraison des voiles. En effet, ces produits, souvent d'une envergure conséquente, nécessitent des colis "hors-catégorie", ce qui engendre des coûts supplémentaires. Cela concerne particulièrement les voiles d'ombrage motorisées, dont les voiles se rétractent automatiquement dans une bôme d'enroulement métallique lourde et encombrante.Jérôme, chargé du projet chez Espace Ombrage, nous a alors proposé de développer une bôme d'enroulement motorisée composée de plusieurs parties, facilement démontable et adaptable.
-                    Cette solution présenterait plusieurs avantages :</p>
+                    <p>Pour ce projet, comme souvent lorsque nous devions choisir un binôme, je me suis appuyé sur mon acolyte habituel, Jules. Au fur et à mesure des projets, nous avons appris à nous organiser et à nous répartir les tâches. La promotion précédente nous avait parlé de ce projet de programmation lorsqu'ils y travaillaient. Nous avions convenu avec Jules que notre objectif serait non seulement de développer un jeu ambitieux, mais également de nous assurer qu'il soit fonctionnel le jour de notre soutenance. L'objectif du projet était d'élaborer un jeu d'arcade avec, à notre disposition, une matrice de 32x16 LED (un écran de 32 pixels de long sur 16 de large), une carte Arduino pour le codage, des câblages ainsi que des commandes telles que des joysticks, des sliders et des boutons poussoirs. <br><br>Nous avons opté pour développer un <b>Donkey Kong</b>, jeu d'arcade créé en 1981 (et oui, 44 ans déjà...), dans lequel nous incarnons Mario, qui doit monter en haut d'une tour pour secourir une princesse en faisant attention à ne pas se faire renverser par les tonneaux lancés par Donkey Kong. Bien que le scénario du jeu soit relativement simple, certains aspects de la programmation nous ont particulièrement mis au défi :
+                    </p>
                 </div>
                 <div class="section-portfolio-img">
                     <!-- Full-width images with number and caption text -->
@@ -140,10 +139,12 @@
                 </div>
             </div>  
             <ul> 
-                <li><b>Réduction de la taille des colis livrés</b> : les différentes parties de la bôme peuvent être rangées côte à côte, réduisant ainsi la longueur des colis.</li> 
-                <li><b>Autonomie des utilisateurs</b> : grâce aux tutoriels proposés et à la facilité de démontage des voiles, les utilisateurs seraient en mesure d'enlever ou de réinstaller leur voile d'ombrage sans faire appel à un tiers spécialisé.</li> 
-                <li><b>Réduction des coûts grâce à la standardisation</b> : les différentes parties de la bôme seraient adaptables à plusieurs formats de voile. Par exemple, en proposant des sections standardisées d'un mètre, ces dernières pourraient être utilisées pour des voiles de deux ou trois mètres de longueur. Cela permettrait de réduire les coûts, tant au niveau de la production qu'au niveau logistique grâce au redimensionnement des colis.</li> 
+                <li><b> Écran restreint et mise en place d'un offset</b> : N'ayant qu'un écran de 16 LED de hauteur, il nous a fallu trouver un moyen pour afficher la suite du parcours à mesure que le personnage se déplaçait vers le haut ou vers le bas.</li> 
+                <li><b>Mouvements et changement d'états</b> : En fonction des actions du joueur ou des événements, nous avons dû imaginer les scénarios possibles : que faire lorsqu'un tonneau touche le personnage ? Comment interdire ou autoriser certains déplacements ? Que se passe-t-il une fois la partie terminée ?</li> 
+                <li><b>Ne pas s'éparpiller</b> : Ayant une imagination débordante, nous avons dû hiérarchiser nos idées en fonction de leur pertinence pour la réussite de notre projet. Nous aurions pu, par exemple, proposer des niveaux de difficulté différents, ajouter un micro pour des effets sonores ou encore concevoir une version "duel" dans laquelle deux joueurs s'opposeraient sur un même parcours, le gagnant étant celui qui atteindrait la dernière plateforme en premier.</li> 
             </ul> 
+            <h4>S'il fallait ne retenir qu'un seul point : </h4>
+            <p><b>Prendre le temps du cadrage</b> : je pense que ce projet informatiques a été particulièrement intéressant pour toutes les réflexions que nous avons menées. Avant même d'entamer le codage du jeu, nous avons du schématiser le jeu et ce qui serait afficher sur l'écran ou encore envisager en amont tous les évênements qui auraient pu survenir une fois la "console allumée".</p>
             <a href="presentation/jeu_arcade_watermark.pdf#toolbar=0&navpanes=0&scrollbar=0">Lien vers la version PDF</a>
             <object
                 id="pdfObject" 

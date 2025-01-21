@@ -130,8 +130,16 @@ header {
 }
 
 .header-center h4 {
+    font-family: Muli, sans-serif;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+}
+
+.header-center p {
+    font-family: Muli, sans-serif;
+    margin: 0;
+    font-size: 1.1rem;
     padding-bottom: 0.5rem;
 }
 
@@ -215,6 +223,12 @@ header {
 
 .emoji {
     height: 1rem;
+    margin-bottom: 0;
+}
+
+.flag {
+    height: 1.5rem;
+    padding-left: 1.5rem;
     margin-bottom: 0;
 }
 
@@ -431,6 +445,15 @@ hr{
     color: rgba(145,118,101, 1);
     text-align: center;
 }
+
+.section-portfolio h4 {
+    flex: 1;
+    font-weight: normal;
+    text-decoration: underline;
+    color: rgba(49,42,37, 1);
+    text-align: left;
+}
+
 .section-portfolio p {
     flex: 1;
     text-align: justify;
@@ -438,7 +461,7 @@ hr{
 }
 .section-portfolio a {
     flex: 1;
-    font-family: PT, serif;
+    font-family: Muli, sans-serif;
     color: rgba(202,161,134, 1);
     text-decoration: underline;
     text-align: center;
@@ -501,7 +524,7 @@ hr{
     max-height: 17rem; /* Limite la hauteur des images */
     object-fit: contain; /* Assure un redimensionnement proportionnel sans recadrage */
     border-radius: 4px;    
-    box-shadow: 0 4px 3px -3px rgba(0,255, 0, 0.15);
+    box-shadow: 0 4px 3px -3px rgba(202,161,134, 0.15);
 }
 
 /* Hide the images by default */
