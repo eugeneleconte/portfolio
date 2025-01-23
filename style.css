@@ -1,10 +1,10 @@
 body {
-       font-family: Muli, sans-serif;
+       font-family: Lato, sans-serif;
        margin: 0; /* Supprime les marges par défaut */
        padding-top: 13.5rem; /* Ajoute un espace pour compenser la hauteur du header */
        line-height: 1.6;
        background-color: #f9f9f9;
-       color: rgba(49,42,37, 1);
+       color: rgba(0,39,60, 1);
        justify-content: center;
        }
 header {
@@ -12,13 +12,13 @@ header {
     top: 0; /* Positionné tout en haut de la page */
     left: 0; /* Étendre à partir de la gauche */
     width: 100%; /* Occupe toute la largeur de l'écran */
-    font-family: Muli, sans-serif;
+    font-family: Lato, sans-serif;
     min-height: 10rem;
-    background: rgba(49,42,37, 1);
+    background: rgba(0,39,60, 1);
     color: #fff;
     padding-top: 0.5rem; /* Espacement vertical uniquement */
     text-align: center;
-    box-shadow: 2px 2px 2px rgba(202,161,134, 0.15);
+    box-shadow: 2px 2px 2px rgba(0,0,255, 0.15);
     z-index: 1000; /* Assure que le header reste au-dessus d'autres éléments */
 }
 
@@ -124,24 +124,33 @@ header {
 
 .header-center h1 {
     margin: 0rem 0;
-    font-family: PT, serif;
+    font-family: Lato, sans-serif;
     font-size: 1.5rem;
     padding-bottom: 0.5rem;
 }
 
 .header-center h4 {
-    font-family: Muli, sans-serif;
+    font-family: Lato, sans-serif;
     margin: 0;
     font-size: 1.1rem;
     padding-bottom: 0.5rem;
 }
 
 .header-center p {
-    font-family: Muli, sans-serif;
+    font-family: Lato, sans-serif;
     margin: 0;
     font-size: 1.1rem;
     padding-bottom: 0.5rem;
 }
+
+.header-center a {
+    color: #f9f9f9;
+}
+
+.header-center a:hover {
+    text-decoration: underline;
+}
+
 
 .header-right{
     flex: 0 0 28%; /* Chaque division prend un tiers de l'espace */
@@ -192,7 +201,7 @@ header {
     background: #fff;
     border-radius: 8px;
     max-width: 70%;
-    box-shadow: -4px 4px 3px -3px rgba(202,161,134, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
     justify-content: center; /* Aligne les éléments en haut */
     display: flex;
@@ -209,7 +218,7 @@ header {
     justify-content: center; /* Aligne les éléments en haut */
     background: #fff;
     border-radius: 8px;
-    box-shadow: -4px 4px 3px -3px rgba(202,161,134, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
 }
 
 .image-section img {
@@ -258,7 +267,7 @@ header {
     margin: -1.4rem -1.4rem;
     padding: 1.4rem 1.4rem; /* Réduit le padding autour de la section */
     background-color: rgba(249, 249, 249, 0.0);
-    color: rgba(49,42,37, 1);
+    color: rgba(0,39,60, 1);
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
@@ -275,21 +284,21 @@ header {
 }
 
 .color-darkblue {
-    color: rgba(49,42,37, 1);
+    color: rgba(0,39,60, 1);
 }
 
 .color-flashblue {
-    color: rgba(202,161,134, 1);
+    color: rgba(0,0,255, 1);
 }
 h2 {
-    font-family:PT, serif;
-    color: rgba(145,118,101, 1);
+    font-family:Lato, sans-serif;
+    color: rgba(0,39,60, 1);
     margin-bottom: 0;
     margin-top: 0;
 }
 
 h4 {
-    color: rgba(49,42,37, 1);
+    color: rgba(0,39,60, 1);
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -302,7 +311,7 @@ h3{
 }
 
 a {
-    color: rgba(49,42,37, 1);
+    color: rgba(0,39,60, 1);
     text-decoration: none;
     display: inline-block; /* Pour que le lien n'ait pas d'espace sous lui */
     margin: 0; /* Espace entre le texte et le lien */
@@ -317,7 +326,7 @@ p {
 }
 
 hr{
-    border: 0.5px solid rgba(202,161,134, 0.55);
+    border: 0.5px solid rgba(0,0,255, 0.55);
     width: 90%;
     margin-top: 0;
 }
@@ -355,7 +364,7 @@ hr{
 }
 
 .sidenav  ul li ul li::marker{
-  color: rgba(49,42,37, 1);
+  color: rgba(0,39,60, 1);
 }
 
 /* Sidenav menu links */
@@ -363,19 +372,19 @@ hr{
   text-decoration: none;
   font-size: 1rem;
   background-color: #f9f9f9;
-  color: rgba(49,42,37, 1);
+  color: rgba(0,39,60, 1);
   display: block;
   transition: 0.3s;
 }
 .sidenav p{
   font-size: 1rem;
-  color: rgba(49,42,37, 1);
+  color: rgba(0,39,60, 1);
   background-color: #f9f9f9;
   z-index: 100;
 }
 
 .sidenav a:hover {
-  color: rgba(202,161,134, 1);
+  color: rgba(0,0,255, 1);
   background-color: #f9f9f9;
 }
 
@@ -403,14 +412,14 @@ hr{
 .sidenav .close {
   position: fixed;
   top: 0;
-  color: rgba(49,42,37, 1);
+  color: rgba(0,39,60, 1);
   background: none;
   margin-left: 14rem;
   font-size: 2rem;
 }
 
 .sidenav .close:hover {
-    color: rgba(202,161,134, 1);
+    color: rgba(0,0,255, 1);
     background: none;
 }
 
@@ -434,7 +443,7 @@ hr{
     border-radius: 8px;
     max-width: 90%;
     flex-direction: column ;
-    box-shadow: -4px 4px 3px -3px rgba(202,161,134, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
     justify-content: center; /* Aligne les éléments en haut */
     display: flex;
@@ -442,7 +451,7 @@ hr{
 
 .section-portfolio h2 {
     flex: 1;
-    color: rgba(145,118,101, 1);
+    color: rgba(0,39,60, 1);
     text-align: center;
 }
 
@@ -450,7 +459,7 @@ hr{
     flex: 1;
     font-weight: normal;
     text-decoration: underline;
-    color: rgba(49,42,37, 1);
+    color: rgba(0,39,60, 1);
     text-align: left;
 }
 
@@ -461,8 +470,8 @@ hr{
 }
 .section-portfolio a {
     flex: 1;
-    font-family: Muli, sans-serif;
-    color: rgba(202,161,134, 1);
+    font-family: Lato, sans-serif;
+    color: rgba(0,0,255, 1);
     text-decoration: underline;
     text-align: center;
 }
@@ -524,7 +533,7 @@ hr{
     max-height: 17rem; /* Limite la hauteur des images */
     object-fit: contain; /* Assure un redimensionnement proportionnel sans recadrage */
     border-radius: 4px;    
-    box-shadow: 0 4px 3px -3px rgba(202,161,134, 0.15);
+    box-shadow: 0 4px 3px -3px rgba(0,0,255, 0.15);
 }
 
 /* Hide the images by default */
@@ -538,7 +547,7 @@ hr{
 /* Caption text */
 .text {
   flex: 1;
-  color: rgba(49,42,37, 1);
+  color: rgba(0,39,60, 1);
   font-size: 0.8rem;
   position: relative;
   width: 100%;
@@ -564,7 +573,7 @@ hr{
 }
 
 .active, .dot:hover {
-  background-color: rgba(49,42,37, 1);
+  background-color: rgba(0,39,60, 1);
 }
 
 /* Fading animation */
@@ -583,7 +592,7 @@ hr{
   flex: 1;
   margin: 0;
   padding: 0;
-  font-family: Muli, sans-serif;
+  font-family: Lato, sans-serif;
 }
 
 /* Conteneur de navigation sticky */
@@ -593,14 +602,14 @@ hr{
   position: sticky;  /* Rendre le menu sticky */
   top: 0;
   border-top: 0.5px solid #f9f9f9;
-  background-color: rgba(49,42,37, 0.00);  /* Fond de menu */
+  background-color: rgba(0,39,60, 0.00);  /* Fond de menu */
   z-index: 1;  /* Assurer que le menu reste au-dessus des autres éléments */
 }
 
 .header-bottom nav:hover {
-    border-top: 1px solid rgba(145,118,101, 1);
+    border-top: 1px solid rgba(0,39,60, 1);
     background-color: #f9f9f9;
-    color: rgba(49,42,37, 1);
+    color: rgba(0,39,60, 1);
 }
 
 /* Liste principale des éléments de menu */
@@ -631,7 +640,7 @@ hr{
 }
 
 .header-bottom nav:hover > ul > li > a{
-    color: rgba(49,42,37, 1);
+    color: rgba(0,39,60, 1);
 }
 
 
@@ -670,12 +679,12 @@ hr{
 
 /* Lorsque l'élément du menu est survolé, changer la couleur */
 .header-bottom nav > ul > li:hover > a {
-  color: rgba(145,118,101, 1);
+  color: rgba(0,39,60, 1);
 }
 
 /* Lorsque l'élément du sous-menu est survolé */
 .sous-menu > li:hover {
-  background-color: rgba(145,118,101, 1);
+  background-color: rgba(0,39,60, 1);
 }
 
 .sous-menu > li:hover > a {
@@ -708,6 +717,243 @@ hr{
         aspect-ratio: 5/3;
     }
 
+/*--------------------------------*/
+
+/* cv */
+.container-cv{
+    width: 100%;
+    font-family: Lato, sans-serif;
+    margin: 0rem auto;
+    height: 100%;
+    padding: 0rem;
+    padding-top: 0;
+    border-radius: 8px;
+    color: rgba(0,39,60,1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; /* Les sections prendront toutes la même hauteur */
+    border-radius: 8px;
+    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
+    box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
+}
+
+.container-skills{
+    flex: 0 0 25%;
+    background-color: #f9f9f9;
+    border-right: 1px solid lightgrey;
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+.container-experiences{
+    background-color: #fff;
+    width: 100%;
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.quelques-chiffres{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; /* Les sections prendront toutes la même hauteur */
+    text-align: center;
+    gap: 1rem;
+}
+
+.container-cv ul{
+    margin-top: 0;
+    padding-left: 1rem;
+    padd
+}
+
+.container-cv a:hover{
+    text-decoration: underline;
+}
+.container-cv h2{
+    font-family: Lato, sans-serif;
+    color: rgba(0,39,60, 1);
+}
+
+.container-cv h3{
+    color: rgba(0,39,60, 1);
+    text-align: left;
+    font-weight: bold;
+}
+
+.container-cv h4{
+    font-weight: bold;
+    color: rgba(0,39,60, 1);
+}
+
+.container-cv p{
+    color: rgba(0,39,60,1);
+    
+}
+
+.quelques-chiffres-titre h3{
+    font-weight: normal;
+}
+
+.quelques-chiffres h2{
+    font-weight: bolder;
+    color: rgba(0,0,255, 1);
+}
+
+.quelques-chiffres h4{
+    font-weight: normal;
+    color: rgba(0,39,60, 1);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.container-experiences div{
+    padding-bottom: 1rem;
+}
+
+.container-experiences div section{
+    padding: 0.5rem 0.5rem;
+}
+
+.container-experiences ul{
+    padding-left: 1rem;
+}
+
+.container-cv hr{
+    border: 1px solid rgba(248,44,92, 1);
+    width: 45%;
+    margin-left: 0rem;
+}
+
+
+/*
+rgba(0,39,60,1)
+rgba(0,0,255, 0.15)
+rgba(0,39,60, 1) 
+*/
+ 
+
+/*--------------------------------
+
+        ----FORMULAIRE-----
+
+--------------------------------*/
+
+
+#open-form {
+    color: rgba(0, 39, 60, 1);
+    text-decoration: none;
+    font-size: 18px;
+    margin: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 17rem;
+    right: -100%;
+    width: 24rem;
+    height: 22rem;
+    background: rgba(249, 249, 249, 1);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: rgba(0, 39, 60, 1);
+}
+
+.popup-close-btn {
+    color: rgba(0, 39, 60, 1);
+    border: none;
+    background-color: rgba(249, 249, 249, 1.0);
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.popup-close-btn:hover{
+    color: rgba(0, 0, 255, 1);
+}
+
+.popup-form label {
+    display: inline-block;
+    width: 5rem;
+}
+
+.popup-form input {
+    width: calc(100% - 7rem);
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(0, 39, 60, 0.5);
+    border-radius: 4px;
+}
+
+.popup-form input:hover {
+    border: 1px solid rgba(0, 0, 255, 1);
+}
+.popup-form textarea {
+    width: 100%;
+    max-height: 8rem;
+    max-width: 22rem;
+    min-height: 6rem;
+    min-width: 22rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(0, 39, 60, 0.5);
+    border-radius: 4px;
+}
+.popup-form textarea:hover {
+    border: 1px solid rgba(0, 0, 255, 1);
+}
+
+.popup-form button {
+    background: rgba(0, 39, 60, 1);
+    color: rgba(249, 249, 249, 1);
+    border: none;
+    width: 100%;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-form button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/*--------------------------------*/
 
 @keyframes rotationFleche {
   0% {
@@ -725,14 +971,14 @@ hr{
 @keyframes apparitionSousMenu {
   0% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
-    border-top: 3px solid rgba(145,118,101, 1);
+    border-top: 3px solid rgba(0,39,60, 1);
   }
   30% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
   100% {
     max-height: 50em;
-    border-top: 3px solid rgba(145,118,101, 1);
+    border-top: 3px solid rgba(0,39,60, 1);
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
 }
@@ -740,6 +986,8 @@ hr{
 .menu-deroulant:hover > .sous-menu {
   animation: apparitionSousMenu 1s forwards;
 }
+
+
 
 @media (max-width: 768px) {
 

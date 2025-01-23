@@ -3,10 +3,10 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/svg+xml" href="image/photo_de_profil-removebg-preview.png">
+   <link rel="icon" type="image/svg+xml" href="../image/photo_de_profil-removebg-preview.png">
    <title>Brumisateur</title>
    <link rel="stylesheet" href="../style.css"> <!-- Chemin vers votre fichier CSS -->
-   <script src="script.js" defer></script>
+   <script src="../script.js" defer></script>
 </head>
 <body>
     <header>
@@ -46,10 +46,6 @@
                   <ul class="menu" id="main-menu">
                     <li class="menu-deroulant">
                       <a href="#">Sportif & Engagé</a>
-                      <ul class="sous-menu">
-                        <li><a href="sport.html">Mon parcours d'athlètes</a></li>
-                        <li><a href="engagements.html">Scoutisme, engagement sociaux</a></li>
-                      </ul>
                     </li>
                     <li class="menu-deroulant">
                       <a href="../index.html">Réalisations</a>
@@ -74,14 +70,10 @@
                 <a id="closeBtn" href="#" class="close">×</a>
                 <ul>
                     <li>
-                        <p>Sportif & Engagé</p>
-                        <ul>
-                            <li><a href="sport.html">Mon parcours d'athlètes</a></li>
-                            <li><a href="engagements.html">Scoutisme, engagement sociaux</a></li>
-                        </ul>
+                        <a href="#">Sportif & Engagé</a>
                     </li>
                     <li>
-                        <a href="index.html">Réalisations</a>
+                        <a href="../index.html">Réalisations</a>
                         <ul>
                             <li><a href="bome_d_enroulement.html">Bome d'enroulement</a></li>
                             <li><a href="brumisateur.html">Brumisateur</a></li>
@@ -99,7 +91,7 @@
                 </ul>
                 <a href="#" id="openBtn">                  
                     <span class="burger-icon">
-                        <img src="image/emoji_burger.png" alt="burger" class="emoji-burger">
+                        <img src="../image/emoji_burger.png" alt="burger" class="emoji-burger">
                     </span>
                 </a>
             </div>    
@@ -118,15 +110,15 @@
                     <div class="slideshow-container">
                         <div class="mySlides fade">
 
-                            <img src="image/brumisateur/img1.png" alt="représentation 3D du système de refroidissement appliqué sur une étale de marché">
+                            <img src="../image/brumisateur/img1.png" alt="représentation 3D du système de refroidissement appliqué sur une étale de marché">
                             <div class="text">Représentation 3D du système de refroidissement appliqué sur une étale de marché</div>
                         </div>
                         <div class="mySlides fade">
-                            <img src="image/brumisateur/img2.png" alt="système d'étanchéité pour assemblé les tuyaux">
+                            <img src="../image/brumisateur/img2.png" alt="système d'étanchéité pour assemblé les tuyaux">
                             <div class="text">Système d'étanchéité pour assemblé les tuyaux</div>
                         </div>
                         <div class="mySlides fade">
-                            <img src="image/brumisateur/img3.png" alt="Système de support" >
+                            <img src="../image/brumisateur/img3.png" alt="Système de support" >
                             <div class="text">Système de support</div>
                         </div>
                           <!-- The dots/circles -->
@@ -145,17 +137,37 @@
             </ul> 
             <h4>S'il fallait ne retenir qu'un seul point : </h4>
             <p><b>Être capable de s'entourer</b>. Nous n'avions pas forcement toutes les connaissances nécessaires pour définir les composants d'un système de refroidissement tel que celui que nous avons imaginé. Nous nous sommes rapprochés de notre enseignant en <b>mécanique des fluides</b> ainsi que de celui en <b>mécanique des solides appliquées</b> afin que la solution que nous avions proposée soit validée par des experts.</p>
-            <a href="presentation/brumisateur_watermark.pdf#toolbar=0&navpanes=0&scrollbar=0">Lien vers la version PDF</a>
-            <object
-                id="pdfObject" 
-                class="pdf" 
-                data="presentation/brumisateur_watermark.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                width="800"
-                height="auto">
-            </object>
-            <script>
-                document.getElementById('pdfObject').addEventListener('contextmenu', function(event) {event.preventDefault();});
-            </script>
+            <a href="#" id="open-form" style="text-decoration: underline; color: rgba(0, 0, 255, 1.0);">Je demande accès à la présentation au format PDF</a>
+             <!-- Pop-up form -->
+            <div class="popup-overlay" id="form-overlay">
+                <div class="form-header">
+                    <h2>Formulaire</h2>
+                    <button class="popup-close-btn" id="close-form">x</button>
+                </div>
+                <div class="popup-form">
+                    <form id="popupForm">
+                        <!-- Request field prefilled with page title -->
+
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="firstname">Prénom :</label>
+                        <input type="text" id="firstname" name="firstname" required>
+
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="request">Request :</label>
+                        <textarea id="request" name="request" rows="6">Hello Eugène,
+
+J'aimerais accéder à la présentation concernant le brumisateur.
+
+Merci.
+                        </textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
         </section>
    </div>
 <script>
