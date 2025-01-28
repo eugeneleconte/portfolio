@@ -1129,11 +1129,20 @@ hr{
 .color-flashblue {
     color: rgba(0,0,255, 1);
 }
+/* Menu principal visible sur les grands écrans */
+@media (min-width: 696px){
+    .container-skills-smallscreen{
+        display: none;
+    }
+}
 
+/* Les règles pour les écrans plus petits */
 @media (max-width: 1200px){
     .header-center p{
         display: none;
     }
+}
+
 @media (max-width: 1149px){
     .header-right{
         width: 100%;
@@ -1203,7 +1212,6 @@ hr{
 }
 
 @media (max-width: 800px) {
-
     header{
         padding-top: 0rem;
         position: static;
@@ -1266,7 +1274,6 @@ hr{
     .header-center{
         width: 80%;
     }
-
 }
 
 @media (max-width:696px){
@@ -1274,6 +1281,7 @@ hr{
         display: none;
     }
     .container-skills-smallscreen{
+        display: block;
         background-color: #f9f9f9;
         border-top: 1px solid lightgrey;
         width: 100%;
@@ -1282,15 +1290,3 @@ hr{
     }
 }
 
-/* Menu principal visible sur les grands écrans */
-@media (min-width: 880px) {
-    .sidenav{
-        display: none;
-    }
-  }
-
-@media (min-width:696px){
-    .container-skills-smallscreen{
-        display: none;
-    }
-}

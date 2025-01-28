@@ -101,32 +101,38 @@ if (toggleButtons){
 
 
 
-//changement de burger-icon en flashblue
 document.addEventListener('DOMContentLoaded', () => {
   const burgerImg = document.querySelector('.burger-icon img');
 
-    if(burgerImg){
-        const updateImageOnScroll = () => {
-            const viewportWidth = window.innerWidth;
-            const scrollY = window.scrollY;
+  if (burgerImg) {
+    const updateImageOnScroll = () => {
+      const viewportWidth = window.innerWidth;
+      const scrollY = window.scrollY;
 
-           if (viewportWidth <= 800 && viewportWidth > 649 && scrollY >= 416) {
-                if (burgerImg.src !== '../image/emoji_burger_flashblue.png') {
-                    burgerImg.src = '../image/emoji_burger_flashblue.png';
-                }
-            } else if (viewportWidth <= 649 && scrollY >= 456) {
-                if (burgerImg.src !== '../image/emoji_burger_flashblue.png') {
-                    burgerImg.src = '../image/emoji_burger_flashblue.png';
-                }
-            } else {
-                if (burgerImg.src !== '../image/emoji_burger.png') {
-                burgerImg.src = '../image/emoji_burger.png';
-                }
-            }
-        };
+      // Récupérer l'URL actuelle de l'image
+      const currentSrc = burgerImg.src;
 
-      // Écoute les événements de scroll et de redimensionnement
-      window.addEventListener('scroll', updateImageOnScroll);
-      window.addEventListener('resize', updateImageOnScroll);
-    }
+      // Extraire la partie après 'image/'
+      const baseUrl = currentSrc.split('image/')[0] + 'image/';
+      let newImage = '';
+
+      if (viewportWidth <= 800 && viewportWidth > 649 && scrollY >= 416) {
+        newImage = 'emoji_burger_flashblue.png';
+      } else if (viewportWidth <= 649 && scrollY >= 456) {
+        newImage = 'emoji_burger_flashblue.png';
+      } else {
+        newImage = 'emoji_burger.png';
+      }
+
+      // Mettre à jour uniquement la partie de l'image
+      if (currentSrc.split('image/')[1] !== newImage) {
+        burgerImg.src = baseUrl + newImage;
+      }
+    };
+
+    // Écoute les événements de scroll et de redimensionnement
+    window.addEventListener('scroll', updateImageOnScroll);
+    window.addEventListener('resize', updateImageOnScroll);
+  }
 });
+
