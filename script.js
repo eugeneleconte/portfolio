@@ -64,16 +64,18 @@ const headerLeft = document.querySelectorAll('header-left');
 
 if (hiddenHeaders.length > 0) {
     window.addEventListener('scroll', () => {
-      const isNearTop = window.scrollY < 160; // 10rem = 160px
+        if (window.innerWidth > 800){
+           const isNearTop = window.scrollY < 160; // 10rem = 160px
 
-      hiddenHeaders.forEach(headers => {
-          // Si ce n'est pas une image, gère la visibilité en fonction du scroll
-          if (isNearTop) {
-            headers.classList.remove('hidden');
-          } else {
-            headers.classList.add('hidden');
-          }
-        })
+            hiddenHeaders.forEach(headers => {
+                // Si ce n'est pas une image, gère la visibilité en fonction du scroll
+                if (isNearTop) {
+                    headers.classList.remove('hidden');
+                } else {
+                    headers.classList.add('hidden');
+                }
+            })
+        }
     });
 };
 
@@ -96,3 +98,35 @@ if (toggleButtons){
         });
     });
 };
+
+
+
+//changement de burger-icon en flashblue
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerImg = document.querySelector('.burger-icon img');
+
+    if(burgerImg){
+        const updateImageOnScroll = () => {
+            const viewportWidth = window.innerWidth;
+            const scrollY = window.scrollY;
+
+           if (viewportWidth <= 800 && viewportWidth > 649 && scrollY >= 416) {
+                if (burgerImg.src !== '../image/emoji_burger_flashblue.png') {
+                    burgerImg.src = '../image/emoji_burger_flashblue.png';
+                }
+            } else if (viewportWidth <= 649 && scrollY >= 456) {
+                if (burgerImg.src !== '../image/emoji_burger_flashblue.png') {
+                    burgerImg.src = '../image/emoji_burger_flashblue.png';
+                }
+            } else {
+                if (burgerImg.src !== '../image/emoji_burger.png') {
+                burgerImg.src = '../image/emoji_burger.png';
+                }
+            }
+        };
+
+      // Écoute les événements de scroll et de redimensionnement
+      window.addEventListener('scroll', updateImageOnScroll);
+      window.addEventListener('resize', updateImageOnScroll);
+    }
+});
