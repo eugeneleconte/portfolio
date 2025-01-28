@@ -814,7 +814,6 @@ hr{
 .toggle-button:hover {
     text-decoration: underline;
     color: darkgrey;
-    font-size: 0.75rem;
 }
 .cv-entreprise ul{
     padding:0;
