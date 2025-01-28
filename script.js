@@ -76,3 +76,23 @@ if (hiddenHeaders.length > 0) {
         })
     });
 };
+
+
+// Sélection des boutons et menus
+const toggleButtons = document.querySelectorAll('.toggle-button');
+const menus = document.querySelectorAll('.cv-menu');
+
+// Ajout d'un événement clic à chaque bouton
+if (toggleButtons){
+    toggleButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            menus[index].classList.toggle('open');
+            // Change le texte du bouton en fonction de l'état du menu
+            if (menus[index].classList.contains('open')) {
+                button.textContent = ` -- voir moins --`;
+            } else {
+                button.textContent = `-- voir plus --`;
+            }
+        });
+    });
+};

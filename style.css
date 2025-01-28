@@ -286,13 +286,7 @@ header {
     top: 0;
 }
 
-.color-darkblue {
-    color: rgba(0,39,60, 1);
-}
 
-.color-flashblue {
-    color: rgba(0,0,255, 1);
-}
 h2 {
     font-family:Lato, sans-serif;
     color: rgba(0,39,60, 1);
@@ -590,7 +584,10 @@ hr{
   to {opacity: 1}
 }
 
-/* Applique un style de base pour tous les éléments sous .header-bottom */
+/* --------------------------- */
+/* header bottom */
+/* --------------------------- */
+
 .header-bottom * {
   flex: 1;
   margin: 0;
@@ -706,6 +703,7 @@ hr{
 }
 
 /* Ajouter un effet de rotation à la flèche lorsque le menu est survolé */
+
 @keyframes rotationFleche {
   0% {
     transform: rotate(0deg);
@@ -762,6 +760,11 @@ hr{
 
 }
 
+.container-skills ul{
+    padding-top: 0;
+    margin-top: 0;
+}
+
 .container-experiences{
     background-color: #fff;
     width: 100%;
@@ -773,36 +776,158 @@ hr{
 }
 
 .quelques-chiffres{
+    padding-left: 2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: stretch; /* Les sections prendront toutes la même hauteur */
-    text-align: center;
+    text-align: left;
     gap: 1rem;
 }
 
-.container-cv ul{
-    margin-top: 0;
+/* Style du conteneur des menus */
+.cv-entreprise {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* Style des boutons "Voir Plus" */
+.toggle-button {
+    background-color: rgba(249, 249, 249, 0);
+    color: grey;
+    padding-left: 4rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.toggle-button:hover {
+    text-decoration: underline;
+    color: darkgrey;
+}
+.cv-entreprise ul{
+    padding:0;
+    margin: 0;
     padding-left: 1rem;
-    padd
+    padding-top: 0.3rem;
+
+}
+.cv-metier{
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.container-experiences div{
+    padding-bottom: 0rem;
+}
+
+.container-experiences ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2.5rem;
+}
+
+/* Style des menus déroulants */
+.cv-menu {
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Lorsque le menu est ouvert */
+.cv-menu.open {
+    max-height: 35rem; /* Ajustez selon le contenu */
 }
 
 .container-cv a:hover{
     text-decoration: underline;
 }
 .container-cv h2{
+    margin-top: 0.5rem;
     font-family: Lato, sans-serif;
     color: rgba(0,39,60, 1);
+}
+
+.cv-avant-propos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0rem;
+    padding: 0rem;
+    margin-bottom: 0rem;
+}
+
+.cv-company-logo {
+    flex: 0;
+    height: 3rem;
+    object-fit: contain;
+    width: auto;
+    margin:0;
+    padding: 0;
+    align-items: center;
+}
+
+.cv-company-name{
+    flex: 1;
+    margin:0;
+    padding: 0;
 }
 
 .container-cv h3{
     color: rgba(0,39,60, 1);
     text-align: left;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5rem;
 }
 
-.container-cv h4{
+.container-cv h6{
+    color: grey;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5rem;
+    font-weight: normal;
+}
+
+.container-cv h5{
+    color: grey;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+    padding-left: 2.5rem;
+    font-weight: normal;
+}
+
+.cv-positon{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 0rem;
+}
+
+.cv-positon::before {
+    content: "•"; /* Symbole de disque (ou utilisez '\2022') */
+    color: rgba(248,44,92, 1);
+    left: 0;
+    top: 0rem; /* Ajustement vertical */
+    padding-top: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 1.1rem;
+    font-size: 1.7rem; /* Taille ajustable */
+}
+
+.container-entreprise h4{
+    margin-bottom: 0;
+    padding-bottom: 0;
     font-weight: bold;
     color: rgba(0,39,60, 1);
 }
@@ -812,32 +937,13 @@ hr{
     
 }
 
-.quelques-chiffres-titre h3{
-    font-weight: normal;
+.quelques-chiffres-titre ul{
+    list-style-type: none;
 }
 
-.quelques-chiffres h2{
-    font-weight: bolder;
+.quelques-chiffres b{
+    font-size: 1.2rem;
     color: rgba(0,0,255, 1);
-}
-
-.quelques-chiffres h4{
-    font-weight: normal;
-    color: rgba(0,39,60, 1);
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.container-experiences div{
-    padding-bottom: 1rem;
-}
-
-.container-experiences div section{
-    padding: 0.5rem 0.5rem;
-}
-
-.container-experiences ul{
-    padding-left: 1rem;
 }
 
 .container-cv hr{
@@ -1005,6 +1111,15 @@ hr{
 
 .menu-deroulant:hover > .sous-menu {
   animation: apparitionSousMenu 1s forwards;
+}
+
+
+.color-darkblue {
+    color: rgba(0,39,60, 1);
+}
+
+.color-flashblue {
+    color: rgba(0,0,255, 1);
 }
 
 @media (max-width: 1149px){

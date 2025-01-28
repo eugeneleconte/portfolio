@@ -1,75 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hidden Header Example</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      height: 200vh; /* Simule un contenu long pour le scroll */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus déroulants</title>
+    <style>
+        /* Styles de base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-    .hidden-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #3498db;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      z-index: 1000;
-    }
+        /* Style du conteneur des menus */
+        .menu-container {
+            margin-bottom: 20px;
+            width: 200px;
+        }
 
-    /* Style pour cacher l'élément */
-    .hidden-header.hidden {
-      opacity: 0;
-      transform: translateY(-30rem);
-      pointer-events: none;
-    }
+        /* Style des boutons "Voir Plus" */
+        .toggle-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
 
-    .content {
-      padding: 2rem;
-    }
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
 
-    h1 {
-      margin-top: 80px; /* Ajoute un espace pour compenser la barre fixe */
-    }
-  </style>
+        /* Style des menus déroulants */
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .menu li {
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu li:hover {
+            background-color: #e2e2e2;
+        }
+
+        /* Lorsque le menu est ouvert */
+        .menu.open {
+            max-height: 300px; /* Ajustez selon le contenu */
+        }
+    </style>
 </head>
 <body>
-  <!-- Header cachable -->
-  <div class="header">
-    <h4>Ceci est un header visible uniquement en haut de la page.</h4>
-    <p class="hidden-header">lngebmvcjawm f</p>
-  </div>
+    <div class="menu-container">
+        <button class="toggle-button">Voir plus - Menu 1</button>
+        <ul class="menu">
+            <li>Option 1.1</li>
+            <li>Option 1.2</li>
+            <li>Option 1.3</li>
+        </ul>
+    </div>
 
-  <!-- Contenu principal -->
-  <div class="content">
-    <h1>Bienvenue sur la page !</h1>
-    <p>Faites défiler pour voir comment le header disparaît.</p>
-    <p>Continuez à scroller pour explorer davantage le contenu.</p>
-    <p>Revenez tout en haut pour faire réapparaître le header.</p>
-  </div>
+    <div class="menu-container">
+        <button class="toggle-button">Voir plus - Menu 2</button>
+        <ul class="menu">
+            <li>Option 2.1</li>
+            <li>Option 2.2</li>
+            <li>Option 2.3</li>
+        </ul>
+    </div>
 
-  <!-- Script pour gérer l'affichage du header -->
-  <script>
-    const hiddenHeaders = document.querySelectorAll('.hidden-header');
+    <script>
+        // Sélection des boutons et menus
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+        const menus = document.querySelectorAll('.menu');
 
-    window.addEventListener('scroll', () => {
-      const isNearTop = window.scrollY < 160; // 10rem = 160px
-
-      hiddenHeaders.forEach(header => {
-        if (isNearTop) {
-          header.classList.remove('hidden');
-        } else {
-          header.classList.add('hidden');
-        }
-      });
-    });
-  </script>
+        // Ajout d'un événement clic à chaque bouton
+        toggleButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                menus[index].classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
