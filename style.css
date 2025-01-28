@@ -3,6 +3,7 @@ body {
        margin: 0; /* Supprime les marges par défaut */
        padding-top: 10.5rem; /* Ajoute un espace pour compenser la hauteur du header */
        line-height: 1.6;
+       box-sizing: border-box;
        background-color: #f9f9f9;
        color: rgba(0,39,60, 1);
        justify-content: center;
@@ -16,6 +17,7 @@ header {
     min-height: 3rem;
     background: rgba(0,39,60, 1);
     color: #fff;
+    box-sizing: border-box;
     padding-top: 0.5rem; /* Espacement vertical uniquement */
     text-align: center;
     box-shadow: 2px 2px 2px rgba(0,0,255, 0.15);
@@ -226,6 +228,7 @@ header {
     text-align: center;
     flex-direction: column;  /* Ajoutez cette ligne pour empiler le titre et l'image */
     align-items: center;     /* Centre les éléments horizontalement */
+    box-sizing: border-box;
     justify-content: center; /* Aligne les éléments en haut */
     background: #fff;
     border-radius: 8px;
@@ -806,6 +809,7 @@ hr{
 .toggle-button {
     background-color: rgba(0, 0, 0, 0);
     color: grey;
+    box-sizing: border-box;
     font-size: 0.75rem;
     padding-left: 4rem;
     padding-bottom: 0.5rem;
@@ -984,12 +988,13 @@ hr{
 
 .popup-overlay {
     position: fixed;
-    top: 17rem;
+    top: 15rem;
     right: -100%;
     width: 24rem;
     height: 22rem;
     background: rgba(249, 249, 249, 1);
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     z-index: 1001;
     transition: right 0.3s ease-in-out;
     display: flex;
@@ -1068,12 +1073,17 @@ hr{
     align-items: center;
     padding: 0.5rem 2rem;
     border-radius: 4px;
+    border: 1px solid transparent; 
     cursor: pointer;
 }
 
 .popup-form button:disabled {
-    background: #aaa;
+    border: 1px solid rgba(0, 0, 0, 1);
     cursor: not-allowed;
+}
+
+.popup-form button:hover{
+    border: 1px solid rgba(0, 0, 255, 1);
 }
 
 /*--------------------------------*/
@@ -1292,6 +1302,22 @@ hr{
         width: 100%;
         padding: 1rem;
         align-items: flex-start;    
+    }
+}
+
+@media (max-width: 414px){
+    .popup-overlay{
+        right: -150%;
+        padding: 0.5rem;
+    }
+    .popup-form input{
+        width: calc(100% - 10rem);
+    }
+    .popup-form textarea{
+        max-height: 8rem;
+        max-width: 14;
+        min-height: 6rem;
+        min-width: 14rem;
     }
 }
 
