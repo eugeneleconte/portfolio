@@ -84,20 +84,28 @@ if (hiddenHeaders.length > 0) {
 const toggleButtons = document.querySelectorAll('.toggle-button');
 const menus = document.querySelectorAll('.cv-menu');
 
+// Récupération du nom du fichier
+const fileName = window.location.pathname.split('/').pop();
+
 // Ajout d'un événement clic à chaque bouton
-if (toggleButtons){
+if (toggleButtons) {
     toggleButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             menus[index].classList.toggle('open');
-            // Change le texte du bouton en fonction de l'état du menu
-            if (menus[index].classList.contains('open')) {
-                button.textContent = ` -- voir moins --`;
-            } else {
-                button.textContent = `-- voir plus --`;
+
+            // Définition du texte du bouton en fonction du fichier et de l'état du menu
+            let showMoreText = "-- voir plus --";
+            let showLessText = "-- voir moins --";
+
+            if (fileName === "about.html") {
+                showMoreText = "-- show more --";
+                showLessText = "-- show less --";
             }
+
+            button.textContent = menus[index].classList.contains('open') ? showLessText : showMoreText;
         });
     });
-};
+}
 
 
 
@@ -135,4 +143,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateImageOnScroll);
   }
 });
+
 
