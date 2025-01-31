@@ -23,7 +23,7 @@
             <div class="header-top">
                 <div class="header-left">
                     <div class="header-left-left">
-                        <a href="../../index.html"><img src="../../image/photo_de_profil-removebg-preview.png" alt="Logo ou image" class="header-logo"></a>
+                        <a href="../index.html"><img src="../../image/photo_de_profil-removebg-preview.png" alt="Logo ou image" class="header-logo"></a>
                     </div>
                     <div class="header-left-right">
                         <ul>
@@ -55,6 +55,7 @@
             <div class="header-bottom">
                 <nav>
                   <ul class="menu" id="main-menu">
+                    <li><a href="../index.html">Home</a></li>
                     <li class="cache"><a href="https://eugeneleconte.github.io/logbook/en/index.html">Sport & Commitment (W.I.P.)</a></li>
                     <li class="menu-deroulant">
                       <a href="../index.html">Projects</a>
@@ -78,11 +79,12 @@
             <div id="mySidenav" class="sidenav">
                 <a id="closeBtn" href="#" class="close">×</a>
                 <ul>
+                    <li><a href="../index.html">Home</a></li>
                     <li class="cache"><a href="https://eugeneleconte.github.io/logbook/en/index.html">Sport & Commitment (W.I.P.)</a></li>
                     <li>
                         <a href="../index.html">Projects</a>
                         <ul>
-                        <li><a href="roller_shade_sail.html">Roller Shade Sail</a></li>
+                            <li><a href="roller_shade_sail.html">Roller Shade Sail</a></li>
                             <li><a href="mist_sprayer.html">Mist Sprayer</a></li>
                             <li><a href="startup_challenge.html">StartUp Challenge</a></li>
                             <li><a href="golf_club.html">Golf Clubs</a></li>
@@ -114,6 +116,7 @@
                     <p>The month after our return from nine months of professional experience abroad, three weeks of challenge were more than welcome to return to the school benches. Each week focused on one aspect of our profile: Innovator, Entrepreneur and Project Manager. Working as a team, we first had to respond to a problem faced by a company. In our case, <a href=“https://www.4dpioneers.com/”>4D Pionners</a>, a company specializing in 3D printing, told us about the difficulties they were experiencing in sourcing supplies and getting to know local players. In the second week, we brought the economic and commercial dimensions to this solution, making sure that the company's problem wasn't specific, but instead was part of a highly profitable and penetrable market. Clearly, the problem can be a business opportunity. Finally, the last week focused on project management. We put forward short/medium/long-term projects, looking for example at manpower, economic forecasts and geographical deployment.</p>
                 </div>
                 <div class="section-portfolio-img">
+                    <div class="carousel-container">
                     <!-- Full-width images with number and caption text -->
                     <div class="slideshow-container">
                         <div class="mySlides fade">
@@ -133,13 +136,16 @@
                             <img src="../../image/challenge_startup/img4.png" alt="Technical data sheet on manufacturers to provide users with precise information">  
                             <div class="text">Technical data sheet on manufacturers to provide users with precise information</div>
                         </div>
-                          <!-- The dots/circles -->
+                          <!-- Boutons de navigation -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+                 <!-- The dots/circles -->  
                         <div style="text-align:center" class="dot-container">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                        </div>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div></div>
                     </div>
                 </div>
             </div> 
@@ -186,32 +192,46 @@ Thank you very much.
         </section>
    </div>
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+function initCarousel(carouselContainer) {
+    let slideIndex = 1;
+    let slides = carouselContainer.querySelectorAll(".mySlides");
+    let dots = carouselContainer.querySelectorAll(".dot");
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+    function showSlides(n) {
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+
+        slides.forEach(slide => slide.style.display = "none");
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
+    }
+
+    // Boutons de navigation
+    carouselContainer.querySelector(".prev").addEventListener("click", () => {
+        showSlides(slideIndex -= 1);
+    });
+
+    carouselContainer.querySelector(".next").addEventListener("click", () => {
+        showSlides(slideIndex += 1);
+    });
+
+    // Gestion des dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showSlides(slideIndex = index + 1);
+        });
+    });
+
+    // Initialisation
+    showSlides(slideIndex);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+// Appliquer le script à tous les carrousels de la page
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".carousel-container").forEach(initCarousel);
+});
 </script>
 
 </body>

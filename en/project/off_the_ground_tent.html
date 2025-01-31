@@ -23,7 +23,7 @@
             <div class="header-top">
                 <div class="header-left">
                     <div class="header-left-left">
-                        <a href="../../index.html"><img src="../../image/photo_de_profil-removebg-preview.png" alt="Logo ou image" class="header-logo"></a>
+                        <a href="../index.html"><img src="../../image/photo_de_profil-removebg-preview.png" alt="Logo ou image" class="header-logo"></a>
                     </div>
                     <div class="header-left-right">
                         <ul>
@@ -55,6 +55,7 @@
             <div class="header-bottom">
                 <nav>
                   <ul class="menu" id="main-menu">
+                    <li><a href="../index.html">Home</a></li>
                     <li class="cache"><a href="https://eugeneleconte.github.io/logbook/en/index.html">Sport & Commitment (W.I.P.)</a></li>
                     <li class="menu-deroulant">
                       <a href="../index.html">Projects</a>
@@ -78,6 +79,7 @@
             <div id="mySidenav" class="sidenav">
                 <a id="closeBtn" href="#" class="close">×</a>
                 <ul>
+                    <li><a href="../index.html">Home</a></li>
                     <li class="cache"><a href="https://eugeneleconte.github.io/logbook/en/index.html">Sport & Commitment (W.I.P.)</a></li>
                     <li>
                         <a href="../index.html">Projects</a>
@@ -116,6 +118,7 @@
                     Cette solution présenterait plusieurs avantages :</p>
                 </div>
                 <div class="section-portfolio-img">
+                    <div class="carousel-container">
                     <!-- Full-width images with number and caption text -->
                     <div class="slideshow-container">
                         <div class="mySlides fade">
@@ -135,13 +138,16 @@
                             <img src="../../image/bome_d_enroulement/img4.png" alt="schéma cinématique de la bôme motorisée">  
                             <div class="text">Schéma cinématique de la bôme motorisée</div>
                         </div>
-                          <!-- The dots/circles -->
+                          <!-- Boutons de navigation -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+                 <!-- The dots/circles -->  
                         <div style="text-align:center" class="dot-container">
-                          <span class="dot" onclick="currentSlide(1)"></span>
-                          <span class="dot" onclick="currentSlide(2)"></span>
-                          <span class="dot" onclick="currentSlide(3)"></span>
-                          <span class="dot" onclick="currentSlide(4)"></span>
-                        </div>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                        </div></div>
                     </div>
                 </div>
             </div>  
@@ -153,32 +159,46 @@
         </section>
    </div>
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+function initCarousel(carouselContainer) {
+    let slideIndex = 1;
+    let slides = carouselContainer.querySelectorAll(".mySlides");
+    let dots = carouselContainer.querySelectorAll(".dot");
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+    function showSlides(n) {
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+
+        slides.forEach(slide => slide.style.display = "none");
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
+    }
+
+    // Boutons de navigation
+    carouselContainer.querySelector(".prev").addEventListener("click", () => {
+        showSlides(slideIndex -= 1);
+    });
+
+    carouselContainer.querySelector(".next").addEventListener("click", () => {
+        showSlides(slideIndex += 1);
+    });
+
+    // Gestion des dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showSlides(slideIndex = index + 1);
+        });
+    });
+
+    // Initialisation
+    showSlides(slideIndex);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+// Appliquer le script à tous les carrousels de la page
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".carousel-container").forEach(initCarousel);
+});
 </script>
 
 </body>

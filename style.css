@@ -263,6 +263,8 @@ footer h4{
 
 .emoji {
     height: 1rem;
+    width: auto;
+    border-radius: 0;
     margin-bottom: 0;
 }
 
@@ -581,6 +583,59 @@ hr{
   text-align: center;
 }
 
+
+/*--------------------*/
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-container a{
+    text-decoration: none;
+}
+
+.slideshow-container {
+    position: relative;
+}
+.slideshow-container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Styles des boutons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;  /* Largeur du bouton */
+    height: 40px; /* Hauteur du bouton */
+    background-color: rgba(255, 255, 255, 0.3); /* Fond semi-transparent */
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px; /* Centrer le texte verticalement */
+    border-radius: 50%; /* Boutons arrondis */
+    border: none;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+
+.prev { 
+    left: 8px;  /* Positionné sur le côté gauche */
+}
+
+.next { 
+    right: 8px; /* Positionné sur le côté droit */
+}
+
+/* Effet au survol */
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
 .dot-container {
     flex: 1;
     position: relative;

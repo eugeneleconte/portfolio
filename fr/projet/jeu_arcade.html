@@ -30,7 +30,7 @@
                             <li><u><b>Compétences utilisées</b></u> :
                                 <ul>
                                     <li><b>Gestion de projet électronique et collaboratif</b></li>
-                                    <li><b>Définition du cahier des charges</b></li>
+                                    <li><b>Cahier des charges</b></li>
                                     <li><b>Planification et priorisation</b></li>
                                 </ul>
                             </li>
@@ -39,7 +39,7 @@
                 </div>    
                 <div class="header-center">
                     <h1>Programmation d'un jeu d'arcade</h1><hr>
-                    <p>2 étudiants supervisés par notre ensignant d'intelligence ambiante ⸱ Février 2021 - Avril 2021<br></p>
+                    <p>2 étudiants supervisés par notre enseignant d'intelligence ambiante ⸱ Février 2021 - Avril 2021<br></p>
                 </div>
                 <div class="header-right">
                     <ul>
@@ -53,6 +53,7 @@
             <div class="header-bottom">
                 <nav>
                   <ul class="menu" id="main-menu">
+                    <li><a href="../../index.html">Accueil</a></li>
                     <li class="cache"><a href="https://eugeneleconte.github.io/logbook/index.html">Sportif & Engagé</a></li>
                     <li class="menu-deroulant">
                       <a href="../../index.html">Réalisations</a>
@@ -63,7 +64,7 @@
                             <li class="cache"><a href="challenge_robot.html">Challenge Robot</a></li>
                         <li><a href="club_de_golf.html">Les club de golf</a></li>
                         <li><a href="jeu_arcade.html">Le jeu d'arcade</a></li>
-                        <li><a href="jeu_de_societe.html">Le jeu de la soupe</a></li>
+                        <li class="cache"><a href="jeu_de_societe.html">Le jeu de la soupe</a></li>
                         <li><a href="robot_chien.html">Le robot chien</a></li>
                         <li><a href="souffleur_aspirateur.html">Le souffleur / Aspirateur</a></li>
                         <li class="cache"><a href="tentes_sur_pilotis.html">Les tentes sur pilotis</a></li>
@@ -78,6 +79,7 @@
             <div id="mySidenav" class="sidenav">
                 <a id="closeBtn" href="#" class="close">×</a>
                 <ul>
+                    <li><a href="../../index.html">Accueil</a></li>
                     <li class="cache"><a href="https://eugeneleconte.github.io/logbook/index.html">Sportif & Engagé</a></li>
                     <li>
                         <a href="../../index.html">Réalisations</p>
@@ -88,7 +90,7 @@
                             <li class="cache"><a href="challenge_robot.html">Challenge Robot</a></li>
                             <li><a href="club_de_golf.html">Les club de golf</a></li>
                             <li><a href="jeu_arcade.html">Le jeu d'arcade</a></li>
-                            <li><a href="jeu_de_societe.html">Le jeu de la soupe</a></li>
+                            <li class="cache"><a href="jeu_de_societe.html">Le jeu de la soupe</a></li>
                             <li><a href="robot_chien.html">Le robot chien</a></li>
                             <li><a href="souffleur_aspirateur.html">Le souffleur / Aspirateur</a></li>
                             <li class="cache"><a href="tentes_sur_pilotis.html">Les tentes sur pilotis</a></li>
@@ -112,10 +114,11 @@
             <h2>Contexte et présentation du projet</h2>
             <div class="section-portfolio-flex">
                 <div class="section-portfolio-texte">
-                    <p>Pour ce projet, comme souvent lorsque nous devions choisir un binôme, je me suis appuyé sur mon acolyte habituel, Jules. Au fur et à mesure des projets, nous avons appris à nous organiser et à nous répartir les tâches. La promotion précédente nous avait parlé de ce projet de programmation lorsqu'ils y travaillaient. Nous avions convenu avec Jules que notre objectif serait non seulement de développer un jeu ambitieux, mais également de nous assurer qu'il soit fonctionnel le jour de notre soutenance. L'objectif du projet était d'élaborer un jeu d'arcade avec, à notre disposition, une matrice de 32x16 LED (un écran de 32 pixels de long sur 16 de large), une carte Arduino pour le codage, des câblages ainsi que des commandes telles que des joysticks, des sliders et des boutons poussoirs. <br><br>Nous avons opté pour développer un <b>Donkey Kong</b>, jeu d'arcade créé en 1981 (et oui, 44 ans déjà...), dans lequel nous incarnons Mario, qui doit monter en haut d'une tour pour secourir une princesse en faisant attention à ne pas se faire renverser par les tonneaux lancés par Donkey Kong. Bien que le scénario du jeu soit relativement simple, certains aspects de la programmation nous ont particulièrement mis au défi :
-                    </p>
+                    <p>Pour ce projet, comme souvent lorsque nous devions choisir un binôme, je me suis appuyé sur mon acolyte habituel, Jules. Au fur et à mesure des projets, nous avons appris à nous organiser et à nous répartir les tâches. La promotion précédente nous avait parlé de ce projet de programmation lorsqu'elle y travaillait. Nous avions convenu avec Jules que notre objectif serait non seulement de développer un jeu ambitieux, mais également de nous assurer qu'il soit fonctionnel le jour de notre soutenance. L'objectif du projet était d'élaborer un jeu d'arcade avec, à notre disposition, une matrice de 32x16 LED (un écran de 32 pixels de long sur 16 de large), une carte Arduino pour le codage, des câblages ainsi que des commandes telles que des joysticks, des sliders et des boutons poussoirs. <br><br> Nous avons opté pour développer un <b>Donkey Kong</b>, jeu d'arcade créé en 1981 (eh oui, 44 ans déjà...), dans lequel nous incarnons Mario, qui doit monter en haut d'une tour pour secourir une princesse en faisant attention à ne pas se faire renverser par les tonneaux lancés par Donkey Kong. Bien que le scénario du jeu soit relativement simple, certains aspects de la programmation nous ont particulièrement mis au défi :</p>
+
                 </div>
                 <div class="section-portfolio-img">
+                    <div class="carousel-container">
                     <!-- Full-width images with number and caption text -->
                     <div class="slideshow-container">
                         <div class="mySlides fade">
@@ -128,25 +131,28 @@
                             <div class="text">Aperçu de notre jeu sur une matrice de 16x32 LED</div>
                         </div>
                         <div class="mySlides fade">
-                            <img src="../../image/jeu_arcade/img3.png" alt="Graphe d'états du jeu" >
-                            <div class="text">Graphe d'états du jeu</div>
+                            <img src="../../image/jeu_arcade/img3.png" alt="Diagramme d'états du jeu" >
+                            <div class="text">Diagramme d'états du jeu</div>
                         </div>
-                          <!-- The dots/circles -->
+                                                  <!-- Boutons de navigation -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+                 <!-- The dots/circles -->       
                         <div style="text-align:center" class="dot-container">
-                          <span class="dot" onclick="currentSlide(1)"></span>
-                          <span class="dot" onclick="currentSlide(2)"></span>
-                          <span class="dot" onclick="currentSlide(3)"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
                         </div>
                     </div>
-                </div>
+                </div></div>
             </div>  
             <ul> 
-                <li><b> Écran restreint et mise en place d'un offset</b> : N'ayant qu'un écran de 16 LED de hauteur, il nous a fallu trouver un moyen pour afficher la suite du parcours à mesure que le personnage se déplaçait vers le haut ou vers le bas.</li> 
-                <li><b>Mouvements et changement d'états</b> : En fonction des actions du joueur ou des événements, nous avons dû imaginer les scénarios possibles : que faire lorsqu'un tonneau touche le personnage ? Comment interdire ou autoriser certains déplacements ? Que se passe-t-il une fois la partie terminée ?</li> 
-                <li><b>Ne pas s'éparpiller</b> : Ayant une imagination débordante, nous avons dû hiérarchiser nos idées en fonction de leur pertinence pour la réussite de notre projet. Nous aurions pu, par exemple, proposer des niveaux de difficulté différents, ajouter un micro pour des effets sonores ou encore concevoir une version "duel" dans laquelle deux joueurs s'opposeraient sur un même parcours, le gagnant étant celui qui atteindrait la dernière plateforme en premier.</li> 
+                <li><b>Écran restreint et mise en place d'un offset</b> : N'ayant qu'un écran de 16 LED de hauteur, nous avons dû trouver un moyen d'afficher la suite du parcours à mesure que le personnage se déplaçait vers le haut ou vers le bas.</li> 
+                <li><b>Mouvements et changements d'état</b> : En fonction des actions du joueur ou des événements, nous avons dû imaginer les scénarios possibles : que faire lorsqu'un tonneau touche le personnage ? Comment interdire ou autoriser certains déplacements ? Que se passe-t-il une fois la partie terminée ?</li> 
+                <li><b>Ne pas s'éparpiller</b> : Avec notre imagination débordante, nous avons dû hiérarchiser nos idées en fonction de leur pertinence pour la réussite du projet. Nous aurions pu, par exemple, proposer différents niveaux de difficulté, ajouter un micro pour des effets sonores ou encore concevoir une version "duel" dans laquelle deux joueurs s'affronteraient sur un même parcours, le gagnant étant celui qui atteindrait la dernière plateforme en premier.</li>
             </ul> 
             <h4>S'il fallait ne retenir qu'un seul point : </h4>
-            <p><b>Prendre le temps du cadrage</b> : je pense que ce projet informatiques a été particulièrement intéressant pour toutes les réflexions que nous avons menées. Avant même d'entamer le codage du jeu, nous avons du schématiser le jeu et ce qui serait afficher sur l'écran ou encore envisager en amont tous les évênements qui auraient pu survenir une fois la "console allumée".</p>
+            <p><b>Prendre le temps du cadrage</b> : je pense que ce projet informatique a été particulièrement intéressant pour toutes les réflexions que nous avons menées. Avant même d'entamer le codage du jeu, nous avons dû schématiser le jeu et ce qui serait affiché sur l'écran, ou encore envisager en amont tous les événements qui pourraient survenir une fois la "console allumée".</p>
             <a href="#" id="open-form" style="text-decoration: underline; color: rgba(0, 0, 255, 1.0);">Je demande accès à la présentation au format PDF</a>
              <!-- Pop-up form -->
             <div class="popup-overlay" id="form-overlay">
@@ -181,32 +187,46 @@ Merci.
         </section>
    </div>
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+function initCarousel(carouselContainer) {
+    let slideIndex = 1;
+    let slides = carouselContainer.querySelectorAll(".mySlides");
+    let dots = carouselContainer.querySelectorAll(".dot");
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+    function showSlides(n) {
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+
+        slides.forEach(slide => slide.style.display = "none");
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
+    }
+
+    // Boutons de navigation
+    carouselContainer.querySelector(".prev").addEventListener("click", () => {
+        showSlides(slideIndex -= 1);
+    });
+
+    carouselContainer.querySelector(".next").addEventListener("click", () => {
+        showSlides(slideIndex += 1);
+    });
+
+    // Gestion des dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showSlides(slideIndex = index + 1);
+        });
+    });
+
+    // Initialisation
+    showSlides(slideIndex);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+// Appliquer le script à tous les carrousels de la page
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".carousel-container").forEach(initCarousel);
+});
 </script>
 
 </body>
