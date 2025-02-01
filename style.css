@@ -221,7 +221,6 @@ footer h4{
     align-items: stretch; /* Les sections prendront toutes la même hauteur */
 }
 
-
 .text-section {
     flex: 1 1 49%; /* La section de texte occupe 49% de la largeur sur les grands écrans */
     padding: 0.4rem 0.6rem 0.4rem 0.6rem; /* Réduit le padding autour de la section */
@@ -275,7 +274,7 @@ footer h4{
 
 .flag {
     height: 1.5rem;
-    padding-left: 1.5rem;
+    margin-left: 1.5rem;
     margin-bottom: 0;
 }
 
@@ -468,7 +467,7 @@ hr{
     margin-bottom: 0;
     padding:0.3rem;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 39, 60, 0.1);
 }
 
 .section-portfolio{
@@ -490,6 +489,7 @@ hr{
     flex: 1;
     color: rgba(0,39,60, 1);
     text-align: center;
+    text-decoration: underline;
 }
 
 .section-portfolio h4 {
@@ -857,6 +857,10 @@ hr{
     padding-top: 0;
     margin-top: 0;
 }
+.container-skills-smallscreen ul{
+    padding-top: 0;
+    margin-top: 0;
+}
 
 .container-experiences{
     background-color: #fff;
@@ -941,6 +945,17 @@ hr{
     max-height: 35rem; /* Ajustez selon le contenu */
 }
 
+.cv-li-a a{
+    text-decoration: underline;
+}
+
+.container-skills p{
+    text-decoration: none;
+}
+/*.cv-ul li a{
+    text-decoration: underline;
+}*/
+
 .container-cv a:hover{
     text-decoration: underline;
 }
@@ -1013,13 +1028,13 @@ hr{
 
 .cv-positon::before {
     content: "•"; /* Symbole de disque (ou utilisez '\2022') */
-    color: rgba(248,44,92, 1);
+    color: rgba(146,29,29, 1);
     left: 0;
     top: 0rem; /* Ajustement vertical */
-    padding-top: 0.8rem;
+    margin-top: 1rem;
     padding-left: 0.5rem;
     padding-right: 1.1rem;
-    font-size: 1.7rem; /* Taille ajustable */
+    font-size: 1.3rem; /* Taille ajustable */
 }
 
 .container-entreprise h4{
@@ -1044,8 +1059,9 @@ hr{
 }
 
 .container-cv hr{
-    border: 1px solid rgba(248,44,92, 1);
+    border: 1px solid rgba(146,29,29, 1);
     width: 45%;
+    margin-bottom: 0.4rem;
     margin-left: 0rem;
 }
 
@@ -1315,7 +1331,7 @@ hr{
         padding-top: 0rem;
     }
     .flag{
-        padding-left: 3.5rem;
+        margin-left: 3.5rem;
     }
     .text-section, .section-portfolio {
        max-width: 100%;
