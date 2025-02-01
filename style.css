@@ -20,7 +20,7 @@ header {
     box-sizing: border-box;
     padding-top: 0.5rem; /* Espacement vertical uniquement */
     text-align: center;
-    box-shadow: 2px 2px 2px rgba(0,0,255, 0.15);
+    box-shadow: 2px 2px 2px rgba(3,3,204, 0.15);
     z-index: 1000; /* Assure que le header reste au-dessus d'autres éléments */
     transition: height 0.3s ease;
 }
@@ -224,11 +224,11 @@ footer h4{
 
 .text-section {
     flex: 1 1 49%; /* La section de texte occupe 49% de la largeur sur les grands écrans */
-    padding: 0.4rem 0.4rem 0.4rem 1rem; /* Réduit le padding autour de la section */
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem; /* Réduit le padding autour de la section */
     background: #fff;
     border-radius: 8px;
     max-width: 70%;
-    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(3,3,204, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
     justify-content: center; /* Aligne les éléments en haut */
     display: flex;
@@ -246,11 +246,16 @@ footer h4{
     justify-content: center; /* Aligne les éléments en haut */
     background: #fff;
     border-radius: 8px;
-    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(3,3,204, 0.15);
+}
+
+.mobile{
+    display: none;
 }
 
 .image-section img {
-   max-width: 16rem;
+   max-width: 18rem;
+   max-height: 18rem;
    object-fit: contain;
    padding: 0;
    margin: 0;
@@ -353,7 +358,7 @@ p {
 }
 
 hr{
-    border: 0.5px solid rgba(0,0,255, 0.55);
+    border: 0.5px solid rgba(146,29,29, 0.55);
     width: 90%;
     margin-top: 0;
 }
@@ -393,7 +398,7 @@ hr{
 }
 
 .sidenav  ul li ul li::marker{
-  color: rgba(0,39,60, 1);
+  color: rgba(146,29,29, 1);
 }
 
 /* Sidenav menu links */
@@ -413,11 +418,11 @@ hr{
 }
 
 .sidenav a:hover {
-  color: rgba(0,0,255, 1);
+  color: rgba(3,3,204, 1);
   background-color: #f9f9f9;
 }
 
-.sidenav ul {
+.sidenav ul{
   list-style-type: none;
   padding: 0;
   background-color: #f9f9f9;
@@ -440,15 +445,15 @@ hr{
 /* Close btn */
 .sidenav .close {
   position: fixed;
-  top: 0;
+  top: 1rem;
   color: rgba(0,39,60, 1);
   background: none;
-  margin-left: 14rem;
+  margin-left: 15rem;
   font-size: 2rem;
 }
 
 .sidenav .close:hover {
-    color: rgba(0,0,255, 1);
+    color: rgba(3,3,204, 1);
     background: none;
 }
 
@@ -459,8 +464,11 @@ hr{
 /* Icône burger */
 .emoji-burger{
     height: 2rem;
-    padding: 2rem 2rem;
+    margin: 1.7rem 1.7rem;
     margin-bottom: 0;
+    padding:0.3rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .section-portfolio{
@@ -472,7 +480,7 @@ hr{
     border-radius: 8px;
     max-width: 90%;
     flex-direction: column ;
-    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(3,3,204, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
     justify-content: center; /* Aligne les éléments en haut */
     display: flex;
@@ -500,7 +508,7 @@ hr{
 .section-portfolio a {
     flex: 1;
     font-family: Lato, sans-serif;
-    color: rgba(0,0,255, 1);
+    color: rgba(3,3,204, 1);
     text-decoration: underline;
     text-align: center;
 }
@@ -562,7 +570,7 @@ hr{
     max-height: 17rem; /* Limite la hauteur des images */
     object-fit: contain; /* Assure un redimensionnement proportionnel sans recadrage */
     border-radius: 4px;    
-    box-shadow: 0 4px 3px -3px rgba(0,0,255, 0.15);
+    box-shadow: 0 4px 3px -3px rgba(3,3,204, 0.15);
 }
 
 /* Hide the images by default */
@@ -767,7 +775,7 @@ hr{
 
 /* Lorsque l'élément du menu est survolé, changer la couleur */
 .header-bottom nav > ul > li:hover > a {
-  color: rgba(0,0,255, 1);
+  color: rgba(3,3,204, 1);
   text-decoration: underline;
 }
 
@@ -800,7 +808,7 @@ hr{
 
 .menu-deroulant:hover > a:after {
   animation: rotationFleche 0.2s linear forwards;
-  color: rgba(0, 0, 255, 1.0);
+  color: rgba(3,3,204, 1.0);
 }
 
 .pdf {
@@ -829,7 +837,7 @@ hr{
     justify-content: center;
     align-items: stretch; /* Les sections prendront toutes la même hauteur */
     border-radius: 8px;
-    box-shadow: -4px 4px 3px -3px rgba(0,0,255, 0.15);
+    box-shadow: -4px 4px 3px -3px rgba(3,3,204, 0.15);
     box-sizing: border-box; /* Assurez-vous que le padding ne modifie pas la taille totale */
 }
 
@@ -1032,7 +1040,7 @@ hr{
 
 .quelques-chiffres b{
     font-size: 1.2rem;
-    color: rgba(0,0,255, 1);
+    color: rgba(3,3,204, 1);
 }
 
 .container-cv hr{
@@ -1097,7 +1105,7 @@ hr{
 }
 
 .popup-close-btn:hover{
-    color: rgba(0, 0, 255, 1);
+    color: rgba(3,3,204, 1);
 }
 
 .popup-form label {
@@ -1117,7 +1125,7 @@ hr{
 }
 
 .popup-form input:hover {
-    border: 1px solid rgba(0, 0, 255, 1);
+    border: 1px solid rgba(3,3,204, 1);
 }
 .popup-form textarea {
     width: 100%;
@@ -1134,7 +1142,7 @@ hr{
     border-radius: 4px;
 }
 .popup-form textarea:hover {
-    border: 1px solid rgba(0, 0, 255, 1);
+    border: 1px solid rgba(3,3,204, 1);
 }
 
 .popup-form button {
@@ -1155,7 +1163,7 @@ hr{
 }
 
 .popup-form button:hover{
-    border: 1px solid rgba(0, 0, 255, 1);
+    border: 1px solid rgba(3,3,204, 1);
 }
 
 /*--------------------------------*/
@@ -1214,7 +1222,7 @@ hr{
 }
 
 .color-flashblue {
-    color: rgba(0,0,255, 1);
+    color: rgba(146,29,29, 1);
 }
 /* Menu principal visible sur les grands écrans */
 @media (min-width: 696px){
@@ -1306,15 +1314,28 @@ hr{
     body{
         padding-top: 0rem;
     }
-
+    .flag{
+        padding-left: 3.5rem;
+    }
     .text-section, .section-portfolio {
        max-width: 100%;
        flex: 1 1 100%;
     }
+
     .image-section{
+        width: 100%;
+    }
+    .web{
         display: none;
     }
 
+    hr{
+        margin-bottom: 0;
+    }
+
+    .mobile{
+        display: flex;
+    }
     .header-left, .header-right {
         flex: 1; /* Réduire l'espace attribué pour conserver la répartition */
     }
@@ -1339,15 +1360,36 @@ hr{
         margin-bottom: 0.5rem; /* Espacement entre les sections */
         flex-direction: column;
     }
+    .header-center h4{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-right: 0;
+    }
 
     .header-top{
+        padding-left: 0rem;
         flex: 100%;
         flex-direction: column;
+    }
+    
+    .header-right{
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .header-right ul{
+        padding-left: 0;
     }
 
     .container {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .container h2{
+        text-align: center;
+        font-size: 1.2rem;
     }
 
     .section-portfolio-img{

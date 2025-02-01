@@ -1,38 +1,49 @@
-//SIDENAV
-
+// SIDENAV
 var sidenav = document.getElementById("mySidenav");
 var openBtn = document.getElementById("openBtn");
 var closeBtn = document.getElementById("closeBtn");
 
-openBtn.onclick = openNav;
+openBtn.addEventListener("click", function (e) {
+  e.preventDefault(); // Empêche le scroll vers le haut
+  openNav();
+});
+
 closeBtn.onclick = closeNav;
 
-/* Set the width of the side navigation to 30px */
+/* Ouvre le menu latéral */
 function openNav() {
   sidenav.classList.add("active");
 }
 
-/* Set the width of the side navigation to 0 */
+/* Ferme le menu latéral */
 function closeNav() {
   sidenav.classList.remove("active");
 }
 
-//FORMULAIRE
-// Show and hide the form
+/* Ferme le menu lors du scroll */
+window.addEventListener("scroll", () => {
+  if (sidenav.classList.contains("active")) {
+    closeNav();
+  }
+});
+
+// FORMULAIRE
+// Affichage et masquage du formulaire
 const openForm = document.getElementById("open-form");
 const closeForm = document.getElementById("close-form");
 const formOverlay = document.getElementById("form-overlay");
 
-if(openForm && closeForm && formOverlay){
-    openForm.addEventListener("click", (e) => {
-        e.preventDefault();
-        formOverlay.style.right = "0"; // Display form on the right
-    });
+if (openForm && closeForm && formOverlay) {
+  openForm.addEventListener("click", (e) => {
+    e.preventDefault();
+    formOverlay.style.right = "0"; // Affiche le formulaire à droite
+  });
 
-    closeForm.addEventListener("click", () => {
-        formOverlay.style.right = "-100%"; // Hide form
-    });
+  closeForm.addEventListener("click", () => {
+    formOverlay.style.right = "-100%"; // Masque le formulaire
+  });
 }
+
 
 // Handle form submission
 const form = document.getElementById("popupForm");
@@ -125,11 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
       let newImage = '';
 
       if (viewportWidth <= 800 && viewportWidth > 649 && scrollY >= 416) {
-        newImage = 'emoji_burger_flashblue.png';
+        newImage = 'emoji_burger_red.png';
       } else if (viewportWidth <= 649 && scrollY >= 456) {
-        newImage = 'emoji_burger_flashblue.png';
+        newImage = 'emoji_burger_red.png';
       } else {
-        newImage = 'emoji_burger.png';
+        newImage = 'emoji_burger_red.png';
       }
 
       // Mettre à jour uniquement la partie de l'image
