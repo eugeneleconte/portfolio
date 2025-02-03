@@ -38,7 +38,12 @@ footer{
 footer h4{
     font-weight: normal;
 }
+
 .cache{
+    display: none;
+}
+
+.mobile{
     display: none;
 }
 
@@ -246,10 +251,6 @@ footer h4{
     background: #fff;
     border-radius: 8px;
     box-shadow: -4px 4px 3px -3px rgba(3,3,204, 0.15);
-}
-
-.mobile{
-    display: none;
 }
 
 .image-section img {
@@ -502,13 +503,15 @@ hr{
 
 .section-portfolio p {
     flex: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: justify;
 
 }
-.section-portfolio a {
+.section-portfolio a{
     flex: 1;
     font-family: Lato, sans-serif;
-    color: rgba(3,3,204, 1);
+    color: rgba(146,29,29, 1);
     text-decoration: underline;
     text-align: center;
 }
@@ -542,7 +545,7 @@ hr{
     justify-content: space-between; /* Gère l'espacement des blocs internes */
 }
 
-.section-portfolio-img {
+.web-section-portfolio-img {
     flex: 1 1 40%; /* La zone image occupe 40% de l'espace disponible */
     max-width: 100%;
     max-height: 100%; /* Limite la hauteur pour correspondre à celle de .section-portfolio-texte */
@@ -554,6 +557,18 @@ hr{
     padding-top: 0rem; /* Espace interne autour du contenu */
     box-sizing: border-box;
 }
+
+.mobile-section-portfolio-img {
+    max-width: 100%;
+    max-height: 100%; /* Limite la hauteur pour correspondre à celle de .section-portfolio-texte */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Cache le contenu débordant */
+    padding-top: 0rem; /* Espace interne autour du contenu */
+    box-sizing: border-box;
+}
+
 
 .slideshow-container {
     flex: 1;
@@ -728,6 +743,7 @@ hr{
 /* Style des liens du menu principal */
 .header-bottom nav > ul > li > a {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);  /* Centrer les liens horizontalement et verticalement */
@@ -775,13 +791,13 @@ hr{
 
 /* Lorsque l'élément du menu est survolé, changer la couleur */
 .header-bottom nav > ul > li:hover > a {
-  color: rgba(3,3,204, 1);
+  color: rgba(146,29,29, 1);
   text-decoration: underline;
 }
 
 /* Lorsque l'élément du sous-menu est survolé */
 .sous-menu > li:hover {
-  background-color: rgba(0,39,60, 1);
+  background-color: rgba(146,29,29, 1);
 }
 
 .sous-menu > li:hover > a {
@@ -808,7 +824,7 @@ hr{
 
 .menu-deroulant:hover > a:after {
   animation: rotationFleche 0.2s linear forwards;
-  color: rgba(3,3,204, 1.0);
+  color: rgba(146,29,29, 1.0);
 }
 
 .pdf {
@@ -1216,14 +1232,14 @@ hr{
 @keyframes apparitionSousMenu {
   0% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
-    border-top: 3px solid rgba(0,39,60, 1);
+    border-top: 3px solid rgba(146,29,29, 1);
   }
   30% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
   100% {
     max-height: 50em;
-    border-top: 3px solid rgba(0,39,60, 1);
+    border-top: 3px solid rgba(146,29,29, 1);
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
 }
@@ -1248,6 +1264,9 @@ hr{
 }
 
 /* Les règles pour les écrans plus petits */
+@media (max-width: 1300px){
+}
+/* Les règles pour les écrans plus petits */
 @media (max-width: 1200px){
     .header-center p{
         display: none;
@@ -1266,9 +1285,6 @@ hr{
     .header-left-right ul{
         margin-top: 0;
         margin-bottom: 0;
-    }
-    body{
-        padding-top: 11.5rem;
     }
 }
 
@@ -1295,14 +1311,15 @@ hr{
 }
 
 @media (max-width: 994){
-    body{
-        padding-top: 13.5rem;
-    }
+
 }
 
 @media (max-width: 880px){
     .header-bottom{
         display: none;
+    }
+    body{
+        padding-top: 11.5rem;
     }
 
     .burger-icon {
@@ -1313,6 +1330,18 @@ hr{
     }
     .sidenav{
         display: block;
+    }
+
+    .section-portfolio-texte{
+        max-width: 100%;
+    }
+
+    .mobile-section-portfolio-img{
+        display: block;
+    }
+
+    .web-section-portfolio-img{
+        display: none;
     }
 }
 
@@ -1408,9 +1437,6 @@ hr{
         font-size: 1.2rem;
     }
 
-    .section-portfolio-img{
-        display: none;
-    }
     .section-portfolio-texte {
         flex: 1 1 100%; /* La zone de texte occupe 60% de l'espace disponible */
         max-width: 100%;
