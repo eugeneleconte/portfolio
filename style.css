@@ -499,6 +499,7 @@ hr{
     text-decoration: underline;
     color: rgba(0,39,60, 1);
     text-align: left;
+    margin-left: 1rem;
 }
 
 .section-portfolio p {
@@ -506,6 +507,9 @@ hr{
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: justify;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    left: 0;
 
 }
 .section-portfolio a{
@@ -514,11 +518,6 @@ hr{
     color: rgba(146,29,29, 1);
     text-decoration: underline;
     text-align: center;
-}
-.section-portfolio p  {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    left: 0;
 }
 
 .section-portfolio ul  {
@@ -1137,7 +1136,7 @@ hr{
 }
 
 .popup-close-btn:hover{
-    color: rgba(3,3,204, 1);
+    color: rgba(146,29,29, 1);
 }
 
 .popup-form label {
@@ -1157,7 +1156,7 @@ hr{
 }
 
 .popup-form input:hover {
-    border: 1px solid rgba(3,3,204, 1);
+    border: 1px solid rgba(146,29,29, 1);
 }
 .popup-form textarea {
     width: 100%;
@@ -1174,7 +1173,7 @@ hr{
     border-radius: 4px;
 }
 .popup-form textarea:hover {
-    border: 1px solid rgba(3,3,204, 1);
+    border: 1px solid rgba(146,29,29, 1);
 }
 
 .popup-form button {
@@ -1195,7 +1194,7 @@ hr{
 }
 
 .popup-form button:hover{
-    border: 1px solid rgba(3,3,204, 1);
+    border: 1px solid rgba(146,29,29, 1);
 }
 
 /*--------------------------------*/
