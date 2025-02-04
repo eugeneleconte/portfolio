@@ -129,9 +129,9 @@
             <div class="mobile-section-portfolio-img">
                 <!-- Full-width images with number and caption text -->
                 <div class="slideshow-container">
-                    <div class="mySlides" style="display: block; ">
-                        <img src="../../image/souffleur_aspirateur/img1.png" alt="souffleur / aspirateur RYOBI à reconcevoir" style="width:100%;">  
-                        <div class="text">souffleur / aspirateur RYOBI à reconcevoir</div>
+                    <div class="mySlides" style="display: block;">
+                        <img src="../../image/souffleur_aspirateur/img1.png" alt="RYOBI blower/vacuum to be redesigned" style="width:100%;">  
+                        <div class="text">RYOBI blower/vacuum to be redesigned</div>
                     </div>
                 </div>
             </div>
@@ -174,35 +174,5 @@ Thank you very much.
             </div>
         </section>
    </div>
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
-</script>
-
 </body>
 </html>
