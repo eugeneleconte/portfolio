@@ -444,11 +444,8 @@ hr{
 
 /* Close btn */
 .sidenav .close {
-  position: fixed;
-  top: 1rem;
   color: rgba(146,29,29, 1);
   background: none;
-  margin-left: 50%;
   font-size: 2rem;
 }
 
