@@ -378,7 +378,6 @@ hr{
   top: 0;
   left: -18rem;
   background-color: #f9f9f9;
-  padding-top: 1rem;
   transition: left 0.5s ease;
 }
 .sidenav ul li a{
