@@ -490,6 +490,12 @@ hr{
     background-color: rgba(0, 39, 60, 0.1);
 }
 
+
+
+/* --------------
+Les articles
+ -------------- */
+
 .section-portfolio{
     flex: 1 1 90%; /* La section de texte occupe 90% de la largeur sur les grands écrans */
     padding: 0.4rem 0.4rem 0.4rem 1rem; /* Réduit le padding autour de la section */
