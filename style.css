@@ -750,6 +750,7 @@ Les articles
 /* Liste principale des éléments de menu */
 .header-bottom nav > ul {
   display: flex;
+  font-weight: bold;
   text-align: center;
   height: var(--hauteur-menu);
   padding: 0; /* Enlever tout padding par défaut */
@@ -791,17 +792,18 @@ Les articles
 
 /* Sous-menu */
 .sous-menu {
-  display: none;  /* Par défaut, caché */
-  position: absolute;  /* Positionner le sous-menu sous l'élément parent */
-  top: 100%;  /* Place le sous-menu juste sous l'élément parent */
-  left: 0;  /* Aligner le sous-menu avec l'élément parent */
-  width: 100%;
-  background-color: #f9f9f9;
-  border-radius: 2px;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.3s ease;  /* Animation pour l'apparition du sous-menu */
+    display: none;  /* Par défaut, caché */
+    position: absolute;  /* Positionner le sous-menu sous l'élément parent */
+    top: 100%;  /* Place le sous-menu juste sous l'élément parent */
+    left: 0;  /* Aligner le sous-menu avec l'élément parent */
+    width: 100%;
+    font-weight: normal;
+    background-color: #f9f9f9;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;  /* Animation pour l'apparition du sous-menu */
 }
 
 /* Élément du sous-menu */
